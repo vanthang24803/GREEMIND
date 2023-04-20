@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    a {
+        @apply text-[rgba(30,30,30,0.5)] cursor-pointer hover:text-black hover:underline transition-all;
+    }
+    img {
+        @apply object-cover;
+    }
+    .icon {
+        @apply text-[20px] mx-4 hover:cursor-pointer hover:scale-125 transition ease-in-out;
+    }
+    .primary {
+        @apply bg-[#C1DCDC];
+    }
+    .icon-ft {
+        @apply text-[22px] mr-6 hover:scale-150 transition-all mt-4;
+    }
+    .social {
+        @apply text-[14px] my-4 text-gray-400 hover:cursor-pointer hover:text-gray-600 hover:font-medium;
+    }
+}
