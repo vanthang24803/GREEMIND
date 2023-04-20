@@ -35,7 +35,7 @@ const category = {
 const Category = () => {
     const { title, subtitle, brand , desc , btnText} = category;
     return (
-        <div className='my-8'>
+        <div className='my-8' id='category'>
             <h1 className="text-center text-3xl font-bold my-2">{title}</h1>
             <p className='text-center text-gray-400 my-4 mb-20'>{subtitle}</p>
             <div className="h-[760px] w-auto primary">

@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from '../assets/Logo.svg';
 import { RiFacebookCircleFill, RiTwitterFill, RiInstagramFill ,RiYoutubeFill } from "react-icons/ri";
 import { FiArrowRight } from "react-icons/fi";
-
+import ScrollButton from "./ScrollButton";
 const footer = {
   logo: Logo,
   subtitle: "We help you find your dream plant",
@@ -73,6 +73,7 @@ const Footer = () => {
         </form>
       </div>
 
+          <ScrollButton />
     </div>
   )
 }
