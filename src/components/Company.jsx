@@ -40,15 +40,15 @@ const company = {
 const Company = () => {
   const { title, brand } = company;
   return (
-    <div id='company'>
-      <div className='mx-10 mt-24 mb-20'>
-        <h1 className="text-4xl font-bold w-[50%] hover:underline">{title}</h1>
+    <div id='company max-w-screen-2xl'>
+      <div className='mx-10 lg:mt-24 md:mt-20 mb-20'>
+        <h1 className="text-4xl font-bold lg:w-[50%] md:text-center lg:text-left hover:underline">{title}</h1>
       </div>
       <div className="primary  flex  justify-between  items-center h-[100px] w-full mb-[8rem]">
         {brand.map(({ id, image }) => {
           return (
             <div className="" key={id}>
-              <img src={image} alt="" className='mx-8 w-[80%] hover:cursor-pointer' />
+              <img src={image} alt="" className='lg:mx-8 md:mx-4 w-[80%] hover:cursor-pointer' />
             </div>
           )
         })}

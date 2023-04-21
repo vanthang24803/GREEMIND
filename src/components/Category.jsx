@@ -35,17 +35,17 @@ const category = {
 const Category = () => {
     const { title, subtitle, brand , desc , btnText} = category;
     return (
-        <div className='my-8' id='category'>
+        <div className='max-w-screen-2xl my-8' id='category'>
             <h1 className="text-center text-3xl font-bold my-2">{title}</h1>
             <p className='text-center text-gray-400 my-4 mb-20'>{subtitle}</p>
-            <div className="h-[760px] w-auto primary">
+            <div className="lg:h-[760px] w-auto primary md:h-[560px]">
                 <div className="flex">
                     {brand.map(({ id, image, name }) => {
                         return (
-                            <div className="flex w-[33.333%]" key={id}>
-                                <div className="my-8 mx-20">
-                                    <img src={image} alt="" className='h-[82%] rounded-lg my-6 hover:translate-y-2  transition-all shadow-2xl' />
-                                    <h1 className="text-center font-bold text-xl">{name}</h1>
+                            <div className="flex lg:w-[33.333%] " key={id}>
+                                <div className="my-8 lg:mx-20 md:mx-8">
+                                    <img src={image} alt="" className='lg:h-[82%] lg:w-auto md:h-[80%] md:w-full rounded-lg lg:my-6 md:my-4 hover:translate-y-2  transition-all shadow-2xl' />
+                                    <h1 className="text-center font-bold text-xl ">{name}</h1>
                                 </div>
                             </div>
                         )
@@ -53,7 +53,7 @@ const Category = () => {
                 </div>
                 <div className="">
                     <p className='text-center text-gray-600 text-base mb-4'>{desc}</p>
-                    <button className='bg-[#FFFF] my-4  ml-[45%] w-[160px] h-[40px] rounded-md font-medium flex  justify-center items-center shadow hover:scale-110 transition'>{btnText}<RiArrowRightLine className='ml-2 text-[18px] hover:translate-x-1 transition ease-in-out' /></button>
+                    <button className='bg-[#FFFF] lg:my-4 md:my-8  lg:ml-[45%] md:ml-[42%] w-[160px] h-[40px] rounded-md font-medium flex  justify-center items-center shadow hover:scale-110 transition'>{btnText}<RiArrowRightLine className='ml-2 text-[18px] lg:hover:translate-x-1 md:hover:translate-x-4 transition ease-in-out' /></button>
                 </div>
             </div>
         </div>
