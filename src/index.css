@@ -4,7 +4,7 @@
 
 @layer base {
     a {
-        @apply text-[rgba(30,30,30,0.5)] cursor-pointer hover:text-black hover:underline transition-all;
+        @apply text-[rgba(30,30,30,0.5)] cursor-pointer hover:text-black transition-all;
     }
     img {
         @apply object-cover;
@@ -19,6 +19,10 @@
         @apply text-[22px] mr-6 hover:scale-150 transition-all mt-4;
     }
     .social {
-        @apply text-[14px] my-4 text-gray-400 hover:cursor-pointer hover:text-gray-600 hover:font-medium;
+        @apply text-[14px] my-4 text-gray-400 hover:cursor-pointer hover:text-gray-600 hover:font-medium relative after:absolute after:bottom-0 after:left-0 after:bg-slate-900 after:h-[1px] after:w-0 hover:after:w-[60%] after:transition-all after:ease-in-out after:duration-300;
     }
+    .nav {
+        @apply mx-4 relative after:absolute after:bottom-0 after:left-0 after:bg-slate-900 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:ease-in-out after:duration-300;
+    }
+   
 }
