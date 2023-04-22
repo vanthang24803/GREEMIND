@@ -48,7 +48,7 @@ const Company = () => {
         {brand.map(({ id, image }) => {
           return (
             <div className="" key={id}>
-              <img src={image} alt="" className='lg:mx-8 md:mx-4 w-[80%] hover:cursor-pointer' />
+              <img src={image} alt="" className='lg:mx-8 md:mx-4  mx-2 w-[80%] hover:cursor-pointer' />
             </div>
           )
         })}

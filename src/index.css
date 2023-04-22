@@ -10,7 +10,7 @@
         @apply object-cover;
     }
     .icon {
-        @apply text-[20px] mx-4 hover:cursor-pointer hover:scale-125 transition ease-in-out;
+        @apply text-[20px] md:mx-4 mx-0 hover:cursor-pointer hover:scale-125 transition ease-in-out ;
     }
     .primary {
         @apply bg-[#C1DCDC];
@@ -19,7 +19,7 @@
         @apply text-[22px] mr-6 hover:scale-150 transition-all mt-4;
     }
     .social {
-        @apply text-[14px] my-4 text-gray-400 hover:cursor-pointer hover:text-gray-600 hover:font-medium relative after:absolute after:bottom-0 after:left-0 after:bg-slate-900 after:h-[1px] after:w-0 hover:after:w-[60%] after:transition-all after:ease-in-out after:duration-300;
+        @apply text-[14px] my-4 text-gray-400 hover:cursor-pointer hover:text-gray-600 hover:font-medium relative after:absolute after:bottom-0 after:left-0 after:bg-slate-900 after:h-[1px] after:w-0 hover:after:w-[60%] after:transition-all after:ease-in-out after:duration-300 md:text-start text-center;
     }
     .nav {
         @apply mx-4 relative after:absolute after:bottom-0 after:left-0 after:bg-slate-900 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:ease-in-out after:duration-300;
