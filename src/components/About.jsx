@@ -32,7 +32,7 @@ const about = {
 const About = () => {
     const { title, subtitle, brand } = about;
     return (
-        <div className='mb-24 max-w-screen-2xl'>
+        <div className='mb-24 max-w-screen-2xl' id='about'>
             <h1 className="text-center text-3xl font-bold my-2" id='contact'>{title}</h1>
             <p className='text-center text-gray-400 my-4 md:mx-0 mx-4'>{subtitle}</p>
        

@@ -54,7 +54,7 @@ const Footer = () => {
               <div className="mx-8" key={id}>
                 <h1 className='font-bold my-6 hover:underline hover:cursor-context-menu'>{title}</h1>
                 <ul>
-                  <li className='social '>{ops1}</li>
+                  <li className='social'>{ops1}</li>
                   <li className='social'>{ops2}</li>
                   <li className='social'>{ops3}</li>
                 </ul>

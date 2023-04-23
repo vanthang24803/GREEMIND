@@ -40,7 +40,7 @@ const company = {
 const Company = () => {
   const { title, brand } = company;
   return (
-    <div id='company max-w-screen-2xl'>
+    <div id='company' className=' max-w-screen-2xl' >
       <div className='mx-10 lg:mt-24 md:mt-20 mb-20'>
         <h1 className="text-4xl font-bold lg:w-[50%] md:text-center lg:text-left hover:underline">{title}</h1>
       </div>
