@@ -6,7 +6,7 @@ import About from './About'
 import Category from './Category'
 import Company from './Company'
 import Footer from './Footer'
-const HomePage = () => {
+const Main = () => {
     return (
         <Fragment>
             <Navbar />
@@ -20,4 +20,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default Main

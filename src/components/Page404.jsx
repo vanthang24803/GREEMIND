@@ -7,12 +7,12 @@ import Home404 from './Home404';
 const Page404 = () => {
 
   const [loading, setLoading] = useState(false);
-
+  const time = 500;
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 500);
+    }, time);
   }, [])
 
 

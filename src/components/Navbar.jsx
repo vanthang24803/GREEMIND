@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.svg";
 import { RiShoppingCart2Line, RiUserLine, RiMenu2Fill, RiCloseLine } from "react-icons/ri";
 
+
+
 const Navbar = () => {
 
     const [open, setOpen] = useState(false);
@@ -35,8 +37,8 @@ const Navbar = () => {
 
             <div className="lg:mx-20 hidden lg:block">
                 <ul className="lg:flex">
-                    <Link to="/"><li className='nav'><a>Home</a></li></Link>
-                    <Link to="/"><li className='nav'><a>Products</a></li></Link>
+                    <Link to="/"><li className='nav'><a href='/'>Home</a></li></Link>
+                    <Link to="/dakjdha"><li className='nav'><a>Products</a></li></Link>
                     <Link to="/"><li className='nav'><a>Contact</a></li></Link>
                     <Link to="/"><li className='nav'><a>Category</a></li></Link>
                     <Link to="/"><li className='nav'><a>Company</a></li></Link>
@@ -45,7 +47,7 @@ const Navbar = () => {
 
             <div className="flex ">
                 <RiShoppingCart2Line className='md:icon md:block hidden' />
-                <RiUserLine className='icon md:block hidden' />
+                <Link to="/login" className='text-black'><RiUserLine className='icon md:block hidden' /></Link>
                 <span className='w-[2px] h-[20px] bg-black mx-4 md:block hidden'></span>
                 <button onClick={handleOpen} className='transition-all ease-in-out duration-700'>
                     {open == true ? <RiCloseLine className='lg:text-[20px] text-[25px] md:ml-0 ml-[11rem] hover:cursor-pointer hover:scale-125 transition ease-in-out ' /> : <RiMenu2Fill className='icon z-10' />}

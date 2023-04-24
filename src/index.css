@@ -27,5 +27,8 @@
     .nav-mb {
         @apply text-center py-5 hover:primary;
     }
+    .input {
+        @apply w-full h-[50px] shadow-lg rounded-lg my-4 p-4 hover:outline outline-offset-1 outline-4 outline-[#a2e0e0];
+    }
    
 }
