@@ -34,7 +34,7 @@ const Home = () => {
 
                 <form className='md:px-16 md:mx-0 mx-8 md:my-12 my-10' >
                     <input type="text" placeholder='What are you looking for?' className='md:text-base  text-[14px] lg:w-[425px] h-[50px] rounded-lg px-4 md:w-[360px] w-full' />
-                    <button className="primary w-[34px] h-[34px] rounded absolute lg:top-[60%] lg:left-[33%] md:left-[54.5%] md:top-[40%] right-[21%] top-[42%] text-[16px] "><FiSearch className='mx-2 text-[17px] hover:scale-125 transition-all' /></button>
+                    <button className="primary w-[34px] h-[34px] rounded absolute lg:top-[60%] lg:left-[32%] md:left-[54.5%] md:top-[40%] right-[21%] top-[42.25%] text-[16px] "><FiSearch className='mx-2 text-[17px] hover:scale-125 transition-all' /></button>
                 </form>
             </div>
 

@@ -1,4 +1,5 @@
-import React, { useState  , useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.svg";
 import { RiShoppingCart2Line, RiUserLine, RiMenu2Fill, RiCloseLine } from "react-icons/ri";
 
@@ -8,22 +9,22 @@ const Navbar = () => {
     const handleOpen = () => {
         setOpen(!open);
     }
-    
+
     const [show, setShow] = useState(false);
 
     const controlNavbar = () => {
-      if (window.scrollY > 200) {
-        setShow(true);
-      } else {
-        setShow(false);
-      }
+        if (window.scrollY > 200) {
+            setShow(true);
+        } else {
+            setShow(false);
+        }
     };
-  
+
     useEffect(() => {
-      window.addEventListener('scroll', controlNavbar);
-      return () => {
-        window.removeEventListener('scroll', controlNavbar);
-      };
+        window.addEventListener('scroll', controlNavbar);
+        return () => {
+            window.removeEventListener('scroll', controlNavbar);
+        };
     }, []);
 
     return (
@@ -34,11 +35,11 @@ const Navbar = () => {
 
             <div className="lg:mx-20 hidden lg:block">
                 <ul className="lg:flex">
-                    <li className='nav'><a href="#">Home</a></li>
-                    <li className='nav'><a href="">Products</a></li>
-                    <li className='nav'><a href="">Contact</a></li>
-                    <li className='nav'><a href="">Category</a></li>
-                    <li className='nav'><a href="">Company</a></li>
+                    <Link to="/"><li className='nav'><a>Home</a></li></Link>
+                    <Link to="/"><li className='nav'><a>Products</a></li></Link>
+                    <Link to="/"><li className='nav'><a>Contact</a></li></Link>
+                    <Link to="/"><li className='nav'><a>Category</a></li></Link>
+                    <Link to="/"><li className='nav'><a>Company</a></li></Link>
                 </ul>
             </div>
 

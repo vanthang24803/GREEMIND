@@ -1,22 +1,33 @@
+import React, { useState, useEffect, Fragment } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import Selling from './components/Selling'
-import About from './components/About'
-import Category from './components/Category'
-import Company from './components/Company'
-import Footer from './components/Footer'
+import Loading from './components/Loading'
+import HomePage from './components/HomePage';
+import Page404 from './components/Page404';
+
 function App() {
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000);
+  }, [])
 
   return (
     <div className="App">
-     <Navbar />
-     <Home />
-     <Selling />
-     <About />
-     <Category />
-     <Company />
-     <Footer />
+      {loading ?
+        <Loading loading={loading} />
+        :
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path="*" element={<Page404 />} />
+          </Routes>
+        </BrowserRouter>
+      }
     </div>
   )
 }
