@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Item1 from '../assets/Item1.svg';
 import Item2 from '../assets/Item2.svg';
 import Item3 from '../assets/Item3.svg';
@@ -6,7 +7,7 @@ import { RiArrowRightLine } from "react-icons/ri";
 
 const sell = {
     title: "Best Selling Plants",
-    subtitle: "Easiest way to healthy life by buying your favorite plants", 
+    subtitle: "Easiest way to healthy life by buying your favorite plants",
     btnText: "See more",
     brand: [
         {
@@ -38,21 +39,23 @@ const Selling = () => {
             <div className="md:w-[26%] w-full mr-20">
                 <h1 className='text-4xl font-bold md:my-2 my-4 hover:underline md:text-start text-center'>{title}</h1>
                 <p className='text-base text-gray-400 md:text-start text-center md:my-0 my-6'>{subtitle}</p>
-                <button className='primary lg:my-4 md:my-8 my-8 md:mx-0 mx-20 w-[160px] h-[40px] rounded-md font-medium flex  justify-center items-center shadow hover:scale-110 transition'>{btnText}<RiArrowRightLine className='ml-2 text-[18px] hover:translate-x-1 transition ease-in-out' /></button> 
+                <Link to="/shop">
+                <button className='primary text-black lg:my-4 md:my-8 my-8 md:mx-0 mx-20 w-[160px] h-[40px] rounded-md font-medium flex  justify-center items-center shadow hover:scale-110 transition'>{btnText}<RiArrowRightLine className='ml-2 text-[18px] hover:translate-x-1 transition ease-in-out' /></button>
+                </Link>
             </div>
 
-                {brand.map((brand, index) => {
-                    const { name, price , image } = brand;
-                    return (
-                        <div className="flex lg:mx-12 md:m-4 md:my-0 md:px-0 px-2 my-4"  key={index}>
-                            <div className="">
-                                <img src={image} alt="" className='mb-4 hover:scale-105 transition cursor-pointer'/>
-                                <p className='font-semibold text-lg my-4'>{name}</p>
-                                <p className='text-gray-400 my-2'>{price}</p>
-                            </div>
+            {brand.map((brand, index) => {
+                const { name, price, image } = brand;
+                return (
+                    <div className="flex lg:mx-12 md:m-4 md:my-0 md:px-0 px-2 my-4" key={index}>
+                        <div className="">
+                            <img src={image} alt="" className='mb-4 hover:scale-105 transition cursor-pointer' />
+                            <p className='font-semibold text-lg my-4'>{name}</p>
+                            <p className='text-gray-400 my-2'>{price}</p>
                         </div>
-                    )
-                })}
+                    </div>
+                )
+            })}
         </div>
     )
 }

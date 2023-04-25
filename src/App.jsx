@@ -6,6 +6,7 @@ import Page404 from './components/Page404';
 import Main from './components/Main';
 import Login from './components/Login';
 import Forgot from './components/Forgot';
+import Shop from './components/Shop';
 
 function App() {
 
@@ -27,8 +28,9 @@ function App() {
           <Routes>
             <Route path='/' element={<Main />} />
             <Route path='/login' element={<Login />}/>
-            <Route path="*" element={<Page404 />} />
             <Route path='/forgot' element={<Forgot />} />
+            <Route path='/shop' element={<Shop />} />
+            <Route path="*" element={<Page404 />} />
           </Routes>
         </BrowserRouter>
       }

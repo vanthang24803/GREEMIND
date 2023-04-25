@@ -38,10 +38,10 @@ const Navbar = () => {
             <div className="lg:mx-20 hidden lg:block">
                 <ul className="lg:flex">
                     <Link to="/"><li className='nav'><a href='/'>Home</a></li></Link>
-                    <Link to="/dakjdha"><li className='nav'><a>Products</a></li></Link>
-                    <Link to="/"><li className='nav'><a>Contact</a></li></Link>
-                    <Link to="/"><li className='nav'><a>Category</a></li></Link>
-                    <Link to="/"><li className='nav'><a>Company</a></li></Link>
+                    <Link to="/shop"><li className='nav'><a>Products</a></li></Link>
+                    <Link to="/blog"><li className='nav'><a>Contact</a></li></Link>
+                    <Link to="/cate"><li className='nav'><a>Category</a></li></Link>
+                    <Link to="/info"><li className='nav'><a>Company</a></li></Link>
                 </ul>
             </div>
 

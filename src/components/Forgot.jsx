@@ -9,7 +9,7 @@ const data = {
     image: Login2,
     title: "Forgot your password?",
     subtitle: "Please confirm your email address below and we will send you verification code.",
-    btnText: "Contine",
+    btnText: "Continue",
     google: "Login with Google",
     desc: "Already have an account ? ",
     main: "Log in"
@@ -46,7 +46,7 @@ const Forgot = () => {
                         <div className="">
                             <button className='mx-10 lg:w-[67.5vh] md:w-[27.5vh] w-[32vh] h-[55px] rounded-xl bg-gray-700 md:my-2 my-0 text-white font-bold text-base hover:scale-105 transition-all ease-in'>{btnText}</button>
                             <button className='mx-10 lg:w-[67.5vh] md:w-[27.5vh] w-[32vh] h-[55px] rounded-xl border-2 border-black bg-white md:my-4 my-6 text-black 
-                font-semibold text-base hover:scale-105 transition-all ease-in flex  justify-center items-center'>
+                            font-semibold text-base hover:scale-105 transition-all ease-in flex  justify-center items-center'>
                                 <FcGoogle className='text-xl mx-2' />  {google}
                             </button>
                         </div>
