@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo.svg";
+import Logo from "/src/assets/Logo.svg";
 import { RiShoppingCart2Line, RiUserLine, RiMenu2Fill, RiCloseLine } from "react-icons/ri";
 
 

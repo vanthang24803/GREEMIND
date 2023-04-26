@@ -1,7 +1,7 @@
 import React from 'react'
-import About1 from '../assets/About1.svg';
-import About2 from '../assets/About2.svg';
-import About3 from '../assets/About3.svg';
+import About1 from '/src/assets/About1.svg';
+import About2 from '/src/assets/About2.svg';
+import About3 from '/src/assets/About3.svg';
 
 const about = {
     title: "About us",

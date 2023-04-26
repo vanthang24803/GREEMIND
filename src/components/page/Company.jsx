@@ -1,9 +1,9 @@
 import React from 'react'
-import Company1 from "../assets/Company1.svg";
-import Company2 from "../assets/Company2.svg";
-import Company3 from "../assets/Company3.svg";
-import Company4 from "../assets/Company4.svg";
-import Company5 from "../assets/Company5.svg";
+import Company1 from "/src/assets/Company1.svg";
+import Company2 from "/src/assets/Company2.svg";
+import Company3 from "/src/assets/Company3.svg";
+import Company4 from "/src/assets/Company4.svg";
+import Company5 from "/src/assets/Company5.svg";
 
 
 const company = {

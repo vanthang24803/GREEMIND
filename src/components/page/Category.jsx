@@ -1,7 +1,7 @@
 import React from 'react'
-import Cate1 from '../assets/Cate1.svg';
-import Cate2 from '../assets/Cate2.svg';
-import Cate3 from '../assets/Cate3.svg';
+import Cate1 from '/src/assets/Cate1.svg';
+import Cate2 from '/src/assets/Cate2.svg';
+import Cate3 from '/src/assets/Cate3.svg';
 import { RiArrowRightLine } from "react-icons/ri";
 
 

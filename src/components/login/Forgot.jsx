@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom';
-import Login2 from "../assets/Login2.svg"
+import Login2 from "/src/assets/Login2.svg"
 import { FcGoogle } from "react-icons/fc";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 

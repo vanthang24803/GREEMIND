@@ -1,8 +1,8 @@
 import React from 'react'
-import Logo from '../assets/Logo.svg';
+import Logo from '/src/assets/Logo.svg';
 import { RiFacebookCircleFill, RiTwitterFill, RiInstagramFill ,RiYoutubeFill } from "react-icons/ri";
 import { FiArrowRight } from "react-icons/fi";
-import ScrollButton from "./ScrollButton";
+import ScrollButton from "../animation/ScrollButton";
 const footer = {
   logo: Logo,
   subtitle: "We help you find your dream plant",

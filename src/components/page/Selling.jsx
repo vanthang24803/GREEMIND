@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Item1 from '../assets/Item1.svg';
-import Item2 from '../assets/Item2.svg';
-import Item3 from '../assets/Item3.svg';
+import Item1 from '/src/assets/Item1.svg';
+import Item2 from '/src/assets/Item2.svg';
+import Item3 from '/src/assets/Item3.svg';
 import { RiArrowRightLine } from "react-icons/ri";
 
 const sell = {

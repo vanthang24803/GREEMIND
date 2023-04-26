@@ -1,7 +1,7 @@
 import { useState, useEffect, Fragment } from 'react'
-import Loading from './Loading';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Loading from '../animation/Loading';
+import Navbar from '../page/Navbar';
+import Footer from '../page/Footer';
 import Home404 from './Home404';
 
 const Page404 = () => {

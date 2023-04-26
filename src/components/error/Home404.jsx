@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { RiArrowRightLine } from "react-icons/ri";
-import Img from "../assets/Img.svg"
+import Img from "/src/assets/Img.svg"
 
 
 const data = {

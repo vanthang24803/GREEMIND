@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react'
 import { Link } from 'react-router-dom';
-import Login1 from "../assets/Login1.svg"
-import Login4 from "../assets/Login4.svg"
+import Login1 from "/src/assets/Login1.svg"
+import Login4 from "/src/assets/Login4.svg"
 import { FcGoogle } from "react-icons/fc";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 

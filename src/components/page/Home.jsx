@@ -1,8 +1,8 @@
 import React from 'react'
-import Main from "../assets/Main.svg";
-import Dark from "../assets/Dark.svg";
-import Left from "../assets/VectorLeft.svg";
-import Right from "../assets/VectorRight.svg";
+import Main from "/src/assets/Main.svg";
+import Dark from "/src/assets/Dark.svg";
+import Left from "/src/assets/VectorLeft.svg";
+import Right from "/src/assets/VectorRight.svg";
 import { FiSearch } from "react-icons/fi";
 
 const home = {
