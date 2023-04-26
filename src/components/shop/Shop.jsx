@@ -34,7 +34,7 @@ const Shop = () => {
                             const { id, image, btnText, name, price } = item;
                             return (
                                 <div className="group" key={id}>
-                                    <Link to="/info">
+                                    <Link to="/items">
                                         <button className='absolute uppercase lg:mx-4 md:mx-6 mx-5 lg:my-[40vh] md:my-[22vh] mt-[24vh] w-[32vh] lg:w-[40vh] md:w-[16vh] h-[40px] bg-[#fffefedd] shadow text-[#6aaeae] font-bold text-lg hidden group-hover:block md:hover:-translate-y-2 transition-all ease-in-out rounded-sm'>{btnText}</button>
                                     </Link>
                                     <img src={image} alt="" className='object-fill lg:h-[50vh] md:h-[27vh] w-full hover:cursor-pointer transition-all ' />

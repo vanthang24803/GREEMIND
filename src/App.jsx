@@ -7,7 +7,7 @@ import Main from './components/page/Main';
 import Login from './components/login/Login';
 import Forgot from './components/login/Forgot';
 import Shop from './components/shop/Shop';
-import Info from './components/info/Info';
+import Items from './components/items/Items';
 
 function App() {
 
@@ -31,7 +31,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/forgot' element={<Forgot />} />
             <Route path='/shop' element={<Shop />} />
-            <Route path='/info' element={<Info />} />
+            <Route path='/items' element={<Items />} />
             <Route path="*" element={<Page404 />} />
           </Routes>
         </BrowserRouter>
