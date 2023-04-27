@@ -53,7 +53,7 @@ const Silder = () => {
                 {data.map(({ id, image }) => {
                     return (
                         <SwiperSlide key={id} className="lg:p-8">
-                            <img src={image} alt="" className="lg:w-5/6 lg:h-5/6 md:h-full md:w-3/4  object-fill md:mx-14  rounded-md shadow" />
+                            <img src={image} alt="" className="mx-2 lg:w-5/6 lg:h-5/6 md:h-full md:w-3/4  object-fill md:mx-14  rounded-md shadow" />
                             <div className="absolute primary w-[63px] h-[58px] lg:top-20 md:top-4 rounded-full lg:right-32 md:right-14 hover:scale-110 transition-all ease-in-out">
                                 <p className="text-center my-4 font-bold text-xl text-white gap-x-2">20%</p>
                             </div>
