@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div className="primary mx-10 my-4 flex h-[20rem]  w-auto max-w-screen-2xl rounded-3xl md:h-[28.6rem]">
       <div className="">
-        <h1 className="px-8 py-8 text-3xl font-bold text-[#000000] text-shadow-md md:max-w-[600px]  md:px-16 md:text-6xl lg:max-w-[800px] lg:text-7xl ">
+        <h1 className="px-8 py-8 text-3xl font-bold text-[#000000] text-shadow-md md:max-w-[600px] md:px-16 md:text-6xl lg:max-w-[800px] lg:text-7xl ">
           {title}
         </h1>
         <div className="flex sm:mx-6 md:px-8">

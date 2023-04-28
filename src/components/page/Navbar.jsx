@@ -70,7 +70,9 @@ const Navbar = () => {
       </div>
 
       <div className="flex ">
-        <RiShoppingCart2Line className="md:icon hidden md:block" />
+        <Link to="/checkout" className="text-black">
+          <RiShoppingCart2Line className="md:icon hidden md:block" />
+        </Link>
         <Link to="/login" className="text-black">
           <RiUserLine className="icon hidden md:block" />
         </Link>
@@ -114,6 +116,11 @@ const Navbar = () => {
               <a href="#company" className="text-lg hover:font-semibold">
                 Company
               </a>
+            </li>
+            <li className="nav-mb">
+              <Link to="/login">
+                <a className="text-lg hover:font-semibold">Sign up / Login</a>
+              </Link>
             </li>
           </ul>
         </div>

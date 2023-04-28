@@ -11,7 +11,9 @@ export default {
         'md': '0 6px 8px #B0B0B0',
         'h2': '0 0 3px #FF0000, 0 0 5px #0000FF',
         'h1': '0 0 3px rgba(0, 0, 0, .8), 0 0 5px rgba(0, 0, 0, .9)',
-     }
+     },fontFamily: {
+      'rubik': ['Rubik', 'sans-serif'],
+    }
     },
     
   },

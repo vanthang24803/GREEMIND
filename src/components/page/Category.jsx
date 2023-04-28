@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Cate1 from "/src/assets/Cate1.svg";
 import Cate2 from "/src/assets/Cate2.svg";
 import Cate3 from "/src/assets/Cate3.svg";
@@ -44,7 +45,8 @@ const Category = () => {
                   <img
                     src={image}
                     alt=""
-                    className="mb-6 rounded-lg shadow-2xl transition-all hover:translate-y-2 md:my-4 md:mb-4 md:h-[80%] md:w-full lg:my-6  lg:h-[82%] lg:w-auto"
+                    className="mb-6 rounded-lg shadow-2xl transition-all hover:translate-y-2 md:my-4 md:mb-4 
+                    md:h-[80%] md:w-full lg:my-6  lg:h-[82%] lg:w-auto"
                   />
                   <h1 className="text-center text-xl font-bold ">{name}</h1>
                 </div>
@@ -56,10 +58,12 @@ const Category = () => {
           <p className="mx-2 mb-8 text-center text-base text-gray-600 md:mx-0 md:mb-4">
             {desc}
           </p>
-          <button className="ml-[29%] flex h-[40px]   w-[160px] items-center justify-center rounded-md bg-[#FFFF] font-medium shadow transition  hover:scale-110 md:my-8 md:ml-[42%] lg:my-4 lg:ml-[45%]">
-            {btnText}
-            <RiArrowRightLine className="ml-2 text-[18px] transition ease-in-out md:hover:translate-x-4 lg:hover:translate-x-1" />
-          </button>
+          <Link to="/items" className="text-black">
+            <button className="ml-[29%] flex h-[40px]   w-[160px] items-center justify-center rounded-md bg-[#FFFF] font-medium shadow transition  hover:scale-110 md:my-8 md:ml-[42%] lg:my-4 lg:ml-[45%]">
+              {btnText}
+              <RiArrowRightLine className="ml-2 text-[18px] transition ease-in-out md:hover:translate-x-4 lg:hover:translate-x-1" />
+            </button>
+          </Link>
         </div>
       </div>
     </div>

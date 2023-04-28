@@ -70,15 +70,19 @@ const Login = () => {
               </form>
 
               <div className="">
-                <button className="mx-10 my-0 h-[55px] w-[32vh] rounded-xl bg-gray-700 text-base font-bold text-white transition-all ease-in hover:scale-105 md:my-2 md:w-[27.5vh] lg:w-[67.5vh]">
+                <button className="mx-10 my-0 h-[55px] w-[32vh] rounded-xl bg-gray-700 text-base font-bold text-white transition-all ease-in hover:scale-105 md:my-2 md:w-[27.5vh] lg:w-[67.5vh]"
+                onClick={() => alert("Success!")}
+                >
                   {btnText}
                 </button>
-                <button
-                  className="mx-10 my-6 flex h-[55px] w-[32vh] items-center justify-center rounded-xl border-2 border-black bg-white text-base 
+                <Link to="/">
+                  <button
+                    className="mx-10 my-6 flex h-[55px] w-[32vh] items-center justify-center rounded-xl border-2 border-black bg-white text-base 
                 font-semibold text-black transition-all ease-in hover:scale-105 md:my-4  md:w-[27.5vh] lg:w-[67.5vh]"
-                >
-                  <FcGoogle className="mx-2 text-xl" /> {google}
-                </button>
+                  >
+                    <FcGoogle className="mx-2 text-xl" /> {google}
+                  </button>
+                </Link>
               </div>
 
               <div className="flex items-center justify-center">
@@ -169,7 +173,7 @@ const Login = () => {
 
             <div className="md:basis-1/2 lg:basis-3/5">
               <button
-                className="absolute top-[46%] bg-transparent md:my-[0.75rem] md:h-[55px] md:w-[40px] lg:my-2 "
+                className="absolute top-[46%] bg-transparent md:my-[0.75rem] md:h-[55px] md:w-[40px] lg:my-2"
                 onClick={handleSuccess}
               >
                 <BiChevronLeft className="text-[60px] font-bold text-white transition-all ease-in-out hover:-translate-x-3" />
