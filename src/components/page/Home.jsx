@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Main from "/src/assets/Main.svg";
 import Dark from "/src/assets/Dark.svg";
 import Left from "/src/assets/VectorLeft.svg";
@@ -6,51 +6,76 @@ import Right from "/src/assets/VectorRight.svg";
 import { FiSearch } from "react-icons/fi";
 
 const home = {
-    title: "Buy your dream plants",
-    subtitle1: "50+",
-    text1: "Plant Species",
-    subtitle2: "100+",
-    text2: "Customers",
-}
+  title: "Buy your dream plants",
+  subtitle1: "50+",
+  text1: "Plant Species",
+  subtitle2: "100+",
+  text2: "Customers",
+};
 
 const Home = () => {
-    const { title, subtitle1, text1, subtitle2, text2 } = home;
-    return (
-        <div className='max-w-screen-2xl primary mx-10 my-4 md:h-[28.6rem]  h-[20rem] w-auto rounded-3xl flex'>
-            <div className="">
-                <h1 className='font-bold lg:text-7xl md:text-6xl text-3xl md:px-16 py-8 px-8  lg:max-w-[800px] md:max-w-[600px] text-[#000000] text-shadow-md '>{title}</h1>
-                <div className="flex md:px-8 sm:mx-6">
-                    <div className="border-r-2  border-black px-8">
-                        <h3 className='font-semibold lg:text-[30px] md:text-[18px] text-[20px]'>{subtitle1}</h3>
-                        <span className=' font-semibold text-base'>{text1}</span>
-                    </div>
+  const { title, subtitle1, text1, subtitle2, text2 } = home;
+  return (
+    <div className="primary mx-10 my-4 flex h-[20rem]  w-auto max-w-screen-2xl rounded-3xl md:h-[28.6rem]">
+      <div className="">
+        <h1 className="px-8 py-8 text-3xl font-bold text-[#000000] text-shadow-md md:max-w-[600px]  md:px-16 md:text-6xl lg:max-w-[800px] lg:text-7xl ">
+          {title}
+        </h1>
+        <div className="flex sm:mx-6 md:px-8">
+          <div className="border-r-2  border-black px-8">
+            <h3 className="text-[20px] font-semibold md:text-[18px] lg:text-[30px]">
+              {subtitle1}
+            </h3>
+            <span className=" text-base font-semibold">{text1}</span>
+          </div>
 
-                    <div className="md:px-8 px-4">
-                        <h3 className='font-semibold lg:text-[30px] md:text-[18px] text-[20px]'>{subtitle2}</h3>
-                        <span className=' font-semibold text-base'>{text2}</span>
-                    </div>
-
-                </div>
-
-                <form className='md:px-16 md:mx-0 mx-8 md:my-12 my-10' >
-                    <input type="text" placeholder='What are you looking for?' className='md:text-base  text-[14px] lg:w-[425px] h-[50px] rounded-lg px-4 md:w-[360px] w-full' />
-                    <button className="primary w-[34px] h-[34px] rounded absolute lg:top-[60%] lg:left-[32%] md:left-[54.5%] md:top-[40%] right-[21%] top-[42.25%] text-[16px] "><FiSearch className='mx-2 text-[17px] hover:scale-125 transition-all' /></button>
-                </form>
-            </div>
-
-
-            <div className="hidden md:flex ">
-                <img src={Dark} alt="" className='absolute  lg:top-[25%] lg:w-auto  lg:right-[12%] hidden lg:block' />
-                <img src={Main} alt="" className='absolute lg:top-[22%] lg:right-[12%] lg:h-[25.8rem] md:top-[17%] md:right-0 md:h-[39.3%]' />
-            </div>
-            <div className="hidden lg:block">
-                <img src={Left} alt="" className='absolute w-[12%] top-[55%] right-[50%] ' />
-
-                <img src={Right} alt="" className=' absolute w-[80px] right-[4%] top-[20%]' />
-            </div>
-
+          <div className="px-4 md:px-8">
+            <h3 className="text-[20px] font-semibold md:text-[18px] lg:text-[30px]">
+              {subtitle2}
+            </h3>
+            <span className=" text-base font-semibold">{text2}</span>
+          </div>
         </div>
-    )
-}
 
-export default Home
+        <form className="mx-8 my-10 md:mx-0 md:my-12 md:px-16">
+          <input
+            type="text"
+            placeholder="What are you looking for?"
+            className="h-[50px]  w-full rounded-lg px-4 text-[14px] md:w-[360px] md:text-base lg:w-[425px]"
+          />
+          <button className="primary absolute right-[21%] top-[42.25%] h-[34px] w-[34px] rounded text-[16px] md:left-[54.5%] md:top-[40%] lg:left-[32%] lg:top-[60%] ">
+            <FiSearch className="mx-2 text-[17px] transition-all hover:scale-125" />
+          </button>
+        </form>
+      </div>
+
+      <div className="hidden md:flex ">
+        <img
+          src={Dark}
+          alt=""
+          className="absolute  hidden lg:right-[12%]  lg:top-[25%] lg:block lg:w-auto"
+        />
+        <img
+          src={Main}
+          alt=""
+          className="absolute md:right-0 md:top-[17%] md:h-[39.3%] lg:right-[12%] lg:top-[22%] lg:h-[25.8rem]"
+        />
+      </div>
+      <div className="hidden lg:block">
+        <img
+          src={Left}
+          alt=""
+          className="absolute right-[50%] top-[55%] w-[12%] "
+        />
+
+        <img
+          src={Right}
+          alt=""
+          className=" absolute right-[4%] top-[20%] w-[80px]"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Home;

@@ -1,123 +1,167 @@
-import React, { Fragment, useState } from 'react'
-import { Link } from 'react-router-dom'
-import Navbar from '../page/Navbar'
-import Footer from '../page/Footer'
-import Silder from './Silder'
+import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
+import Navbar from "../page/Navbar";
+import Footer from "../page/Footer";
+import Silder from "./Silder";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { FcLike } from "react-icons/fc";
-import { RiAddLine, RiSubtractLine  , RiHeartLine , RiShareFill } from "react-icons/ri";
-import Review from './Review'
+import {
+  RiAddLine,
+  RiSubtractLine,
+  RiHeartLine,
+  RiShareFill,
+} from "react-icons/ri";
+import Review from "./Review";
 const data = {
-    home: "Home",
-    shop: "Shop",
-    info: "Info",
-    name: "Abies",
-    price: "₱ 1,400.00",
-    subprice: "₱ 1.320.00",
-    sale: "32%",
-    title: "Abies ballpoint pen smooth writing expensive",
-    reviewText: "2,251 reviews ",
-    addReviewText: "Add Your Review",
-    btnText: "Add to cart ",
-
-}
-
+  home: "Home",
+  shop: "Shop",
+  info: "Info",
+  name: "Abies",
+  price: "₱ 1,400.00",
+  subprice: "₱ 1.320.00",
+  sale: "32%",
+  title: "Abies ballpoint pen smooth writing expensive",
+  reviewText: "2,251 reviews ",
+  addReviewText: "Add Your Review",
+  btnText: "Add to cart ",
+};
 
 const Info = () => {
-    const [item, setItem] = useState(1);
-    const augment = () => {
-        setItem(item + 1);
+  const [item, setItem] = useState(1);
+  const augment = () => {
+    setItem(item + 1);
+  };
+
+  const reduce = () => {
+    if (item > 1) {
+      setItem(item - 1);
     }
+  };
 
-    const reduce = () => {
-        if (item > 1) {
-            setItem(item - 1);
-        }
-    }
+  const {
+    home,
+    shop,
+    info,
+    name,
+    price,
+    title,
+    subprice,
+    btnText,
+    reviewText,
+    addReviewText,
+  } = data;
+  return (
+    <>
+      <Navbar />
+      <Fragment>
+        <div className="flex flex-col md:max-w-[1024px]  md:flex-row lg:max-w-full">
+          <div className="h-[30vh] w-1/2 md:basis-1/2 lg:basis-1/3">
+            <div className="mx-[2rem] my-4 flex lg:mx-[5.75rem]">
+              <Link to="/">
+                <p className="flex text-black">
+                  {home}
+                  <RiArrowRightSLine className="mx-2 my-1" />{" "}
+                </p>
+              </Link>
+              <Link to="/shop">
+                <p className="flex text-black">
+                  {shop}
+                  <RiArrowRightSLine className="mx-2 my-1" />
+                </p>
+              </Link>
+              <p className="flex">
+                {info}
+                <RiArrowRightSLine className="mx-2 my-1" />
+              </p>
+              <p className=" text-gray-500">{name}</p>
+            </div>
+            <Silder />
+          </div>
 
-    const { home, shop, info, name, price, title, subprice, btnText, reviewText, addReviewText } = data;
-    return (
-        <>
-            <Navbar />
-            <Fragment>
-                <div className="flex md:flex-row flex-col  lg:max-w-full md:max-w-[1024px]">
-                    <div className="lg:basis-1/3 md:basis-1/2 h-[30vh] w-1/2">
-                        <div className="flex my-4 lg:mx-[5.75rem] mx-[2rem]">
-                            <Link to="/">
-                                <p className='flex text-black'>{home}<RiArrowRightSLine className='my-1 mx-2' /> </p>
-                            </Link>
-                            <Link to='/shop'>
-                                <p className='flex text-black'>{shop}<RiArrowRightSLine className='my-1 mx-2' /></p>
-                            </Link>
-                            <p className='flex'>{info}<RiArrowRightSLine className='my-1 mx-2' /></p>
-                            <p className=' text-gray-500'>{name}</p>
-                        </div>
-                        <Silder />
-                    </div>
+          <div className="my-8 md:basis-1/2 lg:basis-2/3">
+            {/* Title  */}
+            <div className="mx-4 md:mx-0">
+              <h1 className="text-3xl font-bold md:text-4xl  ">{title}</h1>
 
-                    <div className="lg:basis-2/3 md:basis-1/2 my-8">
-                       {/* Title  */}
-                        <div className="md:mx-0 mx-4">
-                            <h1 className='md:text-4xl text-3xl font-bold  '>{title}</h1>
-                            
-                            {/* Icon */}
-                            <div className="flex mt-8 hover:cursor-pointer">
-                                <FcLike className='text-lg' />
-                                <FcLike className='text-lg' />
-                                <FcLike className='text-lg' />
-                                <FcLike className='text-lg' />
-                                <FcLike className='text-lg mr-4' />
-                                <h3 className='mx-2 text-[12px] font-normal text-gray-600'>{reviewText}</h3>
-                                <p className='text-[12px] font-medium'>{addReviewText}</p>
-                            </div>
+              {/* Icon */}
+              <div className="mt-8 flex hover:cursor-pointer">
+                <FcLike className="text-lg" />
+                <FcLike className="text-lg" />
+                <FcLike className="text-lg" />
+                <FcLike className="text-lg" />
+                <FcLike className="mr-4 text-lg" />
+                <h3 className="mx-2 text-[12px] font-normal text-gray-600">
+                  {reviewText}
+                </h3>
+                <p className="text-[12px] font-medium">{addReviewText}</p>
+              </div>
 
-                            {/* Review Text */}
-                            <div className="flex items-center">
-                                <p className='text-3xl my-8 text-[#72e3e3] font-bold'>{subprice}</p>
-                                <p className='mx-6 text-xl font-semibold line-through text-gray-400'>{price}</p>
-                            </div>
+              {/* Review Text */}
+              <div className="flex items-center">
+                <p className="my-8 text-3xl font-bold text-[#72e3e3]">
+                  {subprice}
+                </p>
+                <p className="mx-6 text-xl font-semibold text-gray-400 line-through">
+                  {price}
+                </p>
+              </div>
 
-                            {/* Button */}
-                            <div className="flex lg:flex-row flex-col">
-                                {/* Handle */}
-                                <div className="w-[160px] h-[55px] border-2 border-gray-100 flex justify-between items-center lg:mx-0 mx-4">
-                                    <button className='w-[40px] h-[40px] rounded-full bg-gray-300 mx-1 flex justify-center items-center'
-                                        onClick={reduce}
-                                    >
-                                        <RiSubtractLine className="text-xlg hover:scale-110 transition-all ease-in-out " />
-                                    </button>
-                                    <p className='text-xl font-medium text-center'>{item}</p>
-                                    <button className='w-[40px] h-[40px] rounded-full bg-gray-300 mx-1 flex justify-center items-center'
-                                        onClick={augment}
-                                    >
-                                        <RiAddLine className='text-lg hover:scale-110 transition-all ease-in-out' />
-                                    </button>
-                                </div>
-                                <div className="lg:mx-24 lg:my-0 my-10">
-                                    <Link to="/cart">
-                                    <button className='w-[320px] h-[55px] primary font-bold text-xl hover:scale-110 transition-all ease-in-out text-white rounded-2xl'>{btnText}</button>
-                                    </Link>
-                                </div>
-                            </div>
-
-                            {/* Share */}
-                            <div className="lg:my-12 my-6 flex">
-                                <button className='uppercase text-lg font-bold flex'><RiHeartLine className='text-2xl mr-3' />Wishlist</button>
-                                <button className='uppercase text-lg font-bold md:mx-16 mx-20 flex'><RiShareFill className='text-2xl mr-3'/>Share</button>
-                            </div>
-                            
-                        </div>
-
-                        {/* Reviews */}
-                        <div className="">
-                            <Review />
-                        </div>
-                    </div>
+              {/* Button */}
+              <div className="flex flex-col lg:flex-row">
+                {/* Handle */}
+                <div
+                  className="mx-4 flex h-[55px] w-[160px] 
+                items-center justify-between border-2 border-gray-100 lg:mx-0"
+                >
+                  <button
+                    className="mx-1 flex h-[40px] w-[40px] items-center justify-center rounded-full bg-gray-300"
+                    onClick={reduce}
+                  >
+                    <RiSubtractLine className="text-xlg transition-all ease-in-out hover:scale-110 " />
+                  </button>
+                  <p className="text-center text-xl font-medium">{item}</p>
+                  <button
+                    className="mx-1 flex h-[40px] w-[40px] items-center justify-center rounded-full bg-gray-300"
+                    onClick={augment}
+                  >
+                    <RiAddLine className="text-lg transition-all ease-in-out hover:scale-110" />
+                  </button>
                 </div>
-            </Fragment>
-            <Footer />
-        </>
-    )
-}
+                <div className="my-10 lg:mx-24 lg:my-0">
+                  <Link to="/cart">
+                    <button
+                      className="primary h-[55px] w-[320px] rounded-2xl text-xl font-bold 
+                    text-white transition-all ease-in-out hover:scale-110"
+                    >
+                      {btnText}
+                    </button>
+                  </Link>
+                </div>
+              </div>
 
-export default Info
+              {/* Share */}
+              <div className="my-6 flex lg:my-12">
+                <button className="flex text-lg font-bold uppercase">
+                  <RiHeartLine className="mr-3 text-2xl" />
+                  Wishlist
+                </button>
+                <button className="mx-20 flex text-lg font-bold uppercase md:mx-16">
+                  <RiShareFill className="mr-3 text-2xl" />
+                  Share
+                </button>
+              </div>
+            </div>
+
+            {/* Reviews */}
+            <div className="">
+              <Review />
+            </div>
+          </div>
+        </div>
+      </Fragment>
+      <Footer />
+    </>
+  );
+};
+
+export default Info;

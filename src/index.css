@@ -3,35 +3,34 @@
 @tailwind utilities;
 
 @layer base {
-    a {
-        @apply text-[rgba(30,30,30,0.5)] cursor-pointer hover:text-black transition-all;
-    }
-    img {
-        @apply object-cover;
-    }
-    .icon {
-        @apply lg:text-[20px] text-[22px] md:mx-4 mx-0 hover:cursor-pointer hover:scale-125 transition ease-in-out ;
-    }
-    .primary {
-        @apply bg-[#C1DCDC];
-    }
-    .icon-ft {
-        @apply text-[22px] mr-6 hover:scale-150 transition-all mt-4;
-    }
-    .social {
-        @apply text-[14px] my-4 text-gray-400 hover:cursor-pointer hover:text-gray-600 hover:font-medium md:relative md:after:absolute md:after:bottom-0 md:after:left-0 md:after:bg-slate-900 md:after:h-[1px] md:after:w-0 md:hover:after:w-[60%] md:after:transition-all md:after:ease-in-out md:after:duration-300 md:text-start text-center;
-    }
-    .nav {
-        @apply mx-4 relative after:absolute after:bottom-0 after:left-0 after:bg-slate-900 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:ease-in-out after:duration-300;
-    }
-    .nav-mb {
-        @apply text-center py-5 hover:primary;
-    }
-    .input {
-        @apply w-full h-[50px] shadow-lg rounded-lg my-4 p-4 hover:outline outline-offset-1 outline-4 outline-[#a2e0e0];
-    }
-    .title-shop {
-        @apply md:text-base text-[13px] nav block cursor-pointer text-gray-500 hover:text-black;
-    }
-   
+  a {
+    @apply cursor-pointer text-[rgba(30,30,30,0.5)] transition-all hover:text-black;
+  }
+  img {
+    @apply object-cover;
+  }
+  .icon {
+    @apply mx-0 text-[22px] transition ease-in-out hover:scale-125 hover:cursor-pointer md:mx-4 lg:text-[20px];
+  }
+  .primary {
+    @apply bg-[#C1DCDC];
+  }
+  .icon-ft {
+    @apply mr-6 mt-4 text-[22px] transition-all hover:scale-150;
+  }
+  .social {
+    @apply my-4 text-center text-[14px] text-gray-400 hover:cursor-pointer hover:font-medium hover:text-gray-600 md:relative md:text-start md:after:absolute md:after:bottom-0 md:after:left-0 md:after:h-[1px] md:after:w-0 md:after:bg-slate-900 md:after:transition-all md:after:duration-300 md:after:ease-in-out md:hover:after:w-[60%];
+  }
+  .nav {
+    @apply relative mx-4 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-slate-900 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full;
+  }
+  .nav-mb {
+    @apply hover:primary py-5 text-center;
+  }
+  .input {
+    @apply my-4 h-[50px] w-full rounded-lg p-4 shadow-lg outline-4 outline-offset-1 outline-[#a2e0e0] hover:outline;
+  }
+  .title-shop {
+    @apply nav block cursor-pointer text-[13px] text-gray-500 hover:text-black md:text-base;
+  }
 }
