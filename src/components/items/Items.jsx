@@ -1,9 +1,11 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../page/Navbar";
 import Footer from "../page/Footer";
 import Silder from "./Silder";
-import { AiFillStar} from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
+import { useSelector, useDispatch } from "react-redux";
+import Checkout from "../shop/Checkout";
+
 import {
   RiAddLine,
   RiSubtractLine,
@@ -12,6 +14,7 @@ import {
   RiArrowRightSLine,
 } from "react-icons/ri";
 import Review from "./Review";
+import NewNav from "../shop/NewNav";
 const data = {
   home: "Home",
   shop: "Shop",
@@ -27,14 +30,24 @@ const data = {
 };
 
 const Info = () => {
+  const { isOpen } = useSelector((state) => state.checkout);
+  const numPrice = 2320.0;
   const [item, setItem] = useState(1);
+  const [oldPrice, setOldPrice] = useState(numPrice);
+  const [newPrice, setNewPrice] = useState(
+    Math.round(numPrice - numPrice * 0.2)
+  );
   const augment = () => {
     setItem(item + 1);
+    setOldPrice(oldPrice + numPrice);
+    setNewPrice(newPrice + Math.round(numPrice - numPrice * 0.2));
   };
 
   const reduce = () => {
     if (item > 1) {
       setItem(item - 1);
+      setOldPrice(oldPrice - numPrice);
+      setNewPrice(newPrice - Math.round(numPrice - numPrice * 0.2));
     }
   };
 
@@ -52,7 +65,7 @@ const Info = () => {
   } = data;
   return (
     <>
-      <Navbar />
+      <NewNav />
       <Fragment>
         <div className="flex flex-col md:max-w-[1024px]  md:flex-row lg:max-w-full lg:pb-10">
           <div className="h-[30vh] w-1/2 md:basis-1/2 lg:basis-1/3">
@@ -89,7 +102,7 @@ const Info = () => {
                 <AiFillStar className="text-xl text-yellow-400 hover:cursor-pointer" />
                 <AiFillStar className="text-xl text-yellow-400 hover:cursor-pointer" />
                 <AiFillStar className="text-xl text-yellow-400 hover:cursor-pointer" />
-                <AiFillStar className="text-xl text-yellow-400 hover:cursor-pointer mr-4" />
+                <AiFillStar className="mr-4 text-xl text-yellow-400 hover:cursor-pointer" />
                 <h3 className="mx-2 text-[12px] font-normal text-gray-600">
                   {reviewText}
                 </h3>
@@ -99,10 +112,10 @@ const Info = () => {
               {/* Review Text */}
               <div className="flex items-center">
                 <p className="my-8 text-3xl font-bold text-[#72e3e3]">
-                  {subprice}
+                  ₱ {newPrice.toFixed(2)}
                 </p>
                 <p className="mx-6 font-rubik text-xl font-semibold text-gray-400 line-through">
-                  {price}
+                  ₱ {oldPrice.toFixed(2)}
                 </p>
               </div>
 
@@ -117,7 +130,7 @@ const Info = () => {
                     className="mx-1 flex h-[40px] w-[40px] items-center justify-center rounded-full bg-gray-300"
                     onClick={reduce}
                   >
-                    <RiSubtractLine className="text-xlg transition-all ease-in-out hover:scale-110 " />
+                    <RiSubtractLine className="text-lg transition-all ease-in-out hover:scale-110 " />
                   </button>
                   <p className="text-center text-xl font-medium">{item}</p>
                   <button
@@ -159,6 +172,7 @@ const Info = () => {
           </div>
         </div>
       </Fragment>
+      {isOpen && <Checkout />}
       <Footer />
     </>
   );

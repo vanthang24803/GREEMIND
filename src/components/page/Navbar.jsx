@@ -70,7 +70,7 @@ const Navbar = () => {
       </div>
 
       <div className="flex ">
-        <Link to="/checkout" className="text-black">
+        <Link to="/shop" className="text-black">
           <RiShoppingCart2Line className="md:icon hidden md:block" />
         </Link>
         <Link to="/login" className="text-black">
@@ -93,7 +93,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <ul className="h-100vh absolute left-0 top-20 w-[100%] bg-[#ffffffdd]  shadow-lg transition-all lg:flex">
             <li className="nav-mb">
-              <a href="#" className="text-lg hover:font-semibold">
+              <a href="/" className="text-lg hover:font-semibold">
                 Home
               </a>
             </li>

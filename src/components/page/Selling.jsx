@@ -53,26 +53,27 @@ const Selling = () => {
           </button>
         </Link>
       </div>
-
-      {brand.map((brand, index) => {
-        const { name, price, image } = brand;
-        return (
-          <div
-            className="my-4 flex px-2 md:m-4 md:my-0 md:px-0 lg:mx-12"
-            key={index}
-          >
-            <div className="">
-              <img
-                src={image}
-                alt=""
-                className="mb-4 cursor-pointer transition hover:scale-105"
-              />
-              <p className="my-4 text-lg font-semibold">{name}</p>
-              <p className="my-2 text-gray-400">{price}</p>
+      <Link to="/shop" className="flex flex-col md:flex-row">
+        {brand.map((brand, index) => {
+          const { name, price, image } = brand;
+          return (
+            <div
+              className="my-4 flex px-2 md:m-4 md:my-0 md:px-0 lg:mx-12"
+              key={index}
+            >
+              <div className="">
+                <img
+                  src={image}
+                  alt=""
+                  className="mb-4 cursor-pointer transition hover:scale-105"
+                />
+                <p className="my-4 text-lg font-semibold">{name}</p>
+                <p className="my-2 text-gray-400">{price}</p>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </Link>
     </div>
   );
 };

@@ -59,7 +59,7 @@ const Review = () => {
   const [info, setInfo] = useState(false);
   const [details, setDetails] = useState(false);
   const [custorm, setCustorm] = useState(false);
-  const [review , setReview] = useState(false);
+  const [review, setReview] = useState(false);
   const handleInfo = () => {
     setInfo(!info);
   };
