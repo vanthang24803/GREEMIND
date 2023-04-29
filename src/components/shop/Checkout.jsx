@@ -1,11 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { HiChevronLeft } from "react-icons/hi";
 import { useSelector, useDispatch } from "react-redux";
 import { open } from "../state/slice/CheckoutSlice";
 import { clear } from "../state/slice/CartSlice";
 import CheckoutItems from "./CheckoutItems";
 import { FaTrash } from "react-icons/fa";
-
 
 const Checkout = () => {
   const dispatch = useDispatch();
@@ -45,7 +45,7 @@ const Checkout = () => {
                 <div className="mt-12 flex items-center justify-between">
                   <div className="flex">
                     <span className="mr-2 font-rubik text-lg">Total Cost:</span>
-                    <p className="font-rubik font-medium text-lg">
+                    <p className="font-rubik text-lg font-medium">
                       ₱ {total.toFixed(2)}
                     </p>
                   </div>
@@ -54,9 +54,11 @@ const Checkout = () => {
                     onClick={() => dispatch(clear())}
                   />
                 </div>
-                <button className="my-8 h-[50px] w-full rounded-md hover:scale-105 bg-[#93E686] font-rubik text-lg font-bold text-white transition-all ease-in-out ">
-                  Check Out
-                </button>
+                <Link to="/buy">
+                  <button className="my-8 h-[50px] w-full rounded-md bg-[#93E686] font-rubik text-lg font-bold text-white transition-all ease-in-out hover:scale-105 ">
+                    Check Out
+                  </button>
+                </Link>
               </>
             )}
           </div>

@@ -53,7 +53,7 @@ const Selling = () => {
           </button>
         </Link>
       </div>
-      <Link to="/shop" className="flex flex-col md:flex-row">
+      <Link to="/shop" className="flex flex-col md:flex-row text-black">
         {brand.map((brand, index) => {
           const { name, price, image } = brand;
           return (

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Footer from "../page/Footer";
 import Silder from "./Silder";
 import { AiFillStar } from "react-icons/ai";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import Checkout from "../shop/Checkout";
 
 import {

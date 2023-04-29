@@ -40,7 +40,7 @@ const footer = {
 const Footer = () => {
   const { logo, subtitle, main, copyright } = footer;
   return (
-    <div className="primary max-w-screen-2xl p-4 md:p-6 lg:p-10">
+    <footer className="primary max-w-screen-2xl p-4 md:p-6 lg:p-10">
       <div className=" flex flex-col md:mx-6 md:mb-6 md:flex-row lg:mx-10 lg:mb-10">
         <div className="">
           <img
@@ -101,7 +101,7 @@ const Footer = () => {
       </div>
 
       <ScrollButton />
-    </div>
+    </footer>
   );
 };
 
