@@ -4,6 +4,7 @@ import Login1 from "/src/assets/Login1.svg";
 import Login4 from "/src/assets/Login4.svg";
 import { FcGoogle } from "react-icons/fc";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import Popup from "../shop/Popup";
 
 const data = {
   create: {
@@ -46,7 +47,10 @@ const Login = () => {
   const handleSuccess = () => {
     setSuccess(!success);
   };
-
+  const [modal, setModal] = useState(false);
+  const hanldeModal = () => {
+    setModal(!modal);
+  };
   return (
     <>
       {success ? (
@@ -70,19 +74,21 @@ const Login = () => {
               </form>
 
               <div className="">
-                <button className="mx-10 my-0 h-[55px] w-[32vh] rounded-xl bg-gray-700 text-base font-bold text-white transition-all ease-in hover:scale-105 md:my-2 md:w-[27.5vh] lg:w-[67.5vh]"
-                onClick={() => alert("Success!")}
+                <button
+                  className="mx-10 my-0 h-[55px] w-[32vh] rounded-xl bg-gray-700 text-base font-bold text-white transition-all ease-in hover:scale-105 md:my-2 md:w-[27.5vh] lg:w-[67.5vh]"
+                  onClick={hanldeModal}
                 >
                   {btnText}
                 </button>
-                <Link to="/">
-                  <button
-                    className="mx-10 my-6 flex h-[55px] w-[32vh] items-center justify-center rounded-xl border-2 border-black bg-white text-base 
+                {modal ? <Popup hanldeModal={hanldeModal} /> : null}
+
+                <button
+                  className="mx-10 my-6 flex h-[55px] w-[32vh] items-center justify-center rounded-xl border-2 border-black bg-white text-base 
                 font-semibold text-black transition-all ease-in hover:scale-105 md:my-4  md:w-[27.5vh] lg:w-[67.5vh]"
-                  >
-                    <FcGoogle className="mx-2 text-xl" /> {google}
-                  </button>
-                </Link>
+                  onClick={hanldeModal}
+                >
+                  <FcGoogle className="mx-2 text-xl" /> {google}
+                </button>
               </div>
 
               <div className="flex items-center justify-center">

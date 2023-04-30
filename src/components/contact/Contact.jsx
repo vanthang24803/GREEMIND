@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../page/Footer";
 import Navbar from "../page/Navbar";
 import { FiArrowUpRight } from "react-icons/fi";
+import Modal from "./Modal";
 const Contact = () => {
+  const [modal, setModal] = useState(false);
+  const hanldeModal = () => {
+    setModal(!modal);
+  };
   return (
     <>
       <Navbar />
@@ -94,9 +99,11 @@ const Contact = () => {
             <button
               className="mt-12 flex h-[50px] w-full items-center justify-center border-2 border-black  bg-black font-medium
             text-white hover:bg-white hover:text-black"
+            onClick={hanldeModal}
             >
               Submit <FiArrowUpRight className="mx-1 text-lg" />
             </button>
+            {modal ? <Modal hanldeModal={hanldeModal} /> : null}
           </div>
         </div>
       </section>

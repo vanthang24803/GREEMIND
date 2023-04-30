@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Navbar from "/src/components/page/Navbar";
 import Footer from "../page/Footer";
 import { useSelector } from "react-redux";
-import Checkout from "./Checkout";
 import PayItems from "./PayItems";
 import { RiArrowRightSLine } from "react-icons/ri";
 import Popup from "./Popup";

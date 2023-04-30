@@ -31,7 +31,7 @@ const CartSlice = createSlice({
       const itemIndex = state.cartItems.findIndex(
         (cartItem) => cartItem.id === action.payload.id
       );
-      state.cartItems[itemIndex].amount > 0 &&
+      state.cartItems[itemIndex].amount > 1 &&
         state.cartItems[itemIndex].amount-- &&
         state.amount--;
     },

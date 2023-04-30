@@ -4,7 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import PopupImg from "/src/assets/PopupImg.svg";
 const Popup = ({ hanldeModal }) => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-transparentBlack bg-opacity-10 ">
+    <div className="fixed inset-0 flex items-center justify-center bg-transparentBlack bg-opacity-10 z-10">
       <div className="w-3/4 rounded-xl bg-white shadow-2xl md:w-1/2 lg:h-3/5 lg:w-1/3 ">
         <button className="my-4 flex w-full justify-end " onClick={hanldeModal}>
           <AiOutlineClose className="mx-4 text-2xl transition-all ease-in-out hover:scale-125" />
