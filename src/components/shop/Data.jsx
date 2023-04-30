@@ -2,7 +2,7 @@ const Data = [
   {
     id: 1,
     image:
-      "https://i.pinimg.com/564x/42/0e/78/420e78390930fcc9bed85edb176829a8.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_pink.jpg?v=1680548652",
     name: "Abies",
     price: 1400,
     category: "Big",
@@ -10,7 +10,7 @@ const Data = [
   {
     id: 2,
     image:
-      "https://i.pinimg.com/564x/17/1b/9a/171b9abb4e18d607c3213c007d31e67d.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_yellow.jpg?v=1680545655",
     name: "Purple",
     price: 1450,
     category: "Small",
@@ -18,7 +18,7 @@ const Data = [
   {
     id: 3,
     image:
-      "https://i.pinimg.com/564x/9d/52/6e/9d526e6beace55761e2806c5ac24a2db.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-piedmont-orchid_white_purple.jpg?v=1680545920",
     name: "Acer palmatum",
     price: 1600,
     category: "Medium",
@@ -26,7 +26,7 @@ const Data = [
   {
     id: 4,
     image:
-      "https://i.pinimg.com/564x/f8/47/01/f847019beb3cbaab94209b2e19948f23.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-anthurium_pink.jpg?v=1680539203",
     name: "Berberis",
     price: 1200,
     category: "Small",
@@ -34,7 +34,7 @@ const Data = [
   {
     id: 5,
     image:
-      "https://i.pinimg.com/564x/56/48/db/5648db70778c9a20ed5f3e7613661b6c.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-piedmont-orchid_white_purple.jpg?v=1680545920",
     name: "Betula",
     price: 1200,
     category: "Small",
@@ -42,7 +42,7 @@ const Data = [
   {
     id: 6,
     image:
-      "https://i.pinimg.com/564x/01/da/42/01da4249bc5f9966992f1007f6fdaeb3.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_purple.jpg?v=1680542287",
     name: "Bougainvillea",
     price: 1200,
     category: "Big",
@@ -50,31 +50,37 @@ const Data = [
   {
     id: 7,
     image:
-      "https://i.pinimg.com/564x/63/b0/e7/63b0e7da7c0c1ed9c3c0906ea71c964e.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-piedmont-orchid_pink.jpg?v=1680546299",
     name: "Carpinus",
     price: 1100,
     category: "Big",
   },
   {
     id: 8,
+    // image:
+    //   "https://images.pexels.com/photos/15018891/pexels-photo-15018891.jpeg?auto=compress&cs=tinysrgb&w=600",
     image:
-      "https://i.pinimg.com/564x/b1/33/34/b133342285beb204560c462be04dc995.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_sunrise.jpg?v=1680545540",
     name: "Cedrus",
     price: 2000,
     category: "Medium",
   },
   {
     id: 9,
+    // image:
+    //   "https://images.pexels.com/photos/14553895/pexels-photo-14553895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     image:
-      "https://i.pinimg.com/564x/3e/24/ca/3e24ca9eb81f760c1530515ce5285277.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_red.jpg?v=1681765994",
     name: "Euonymus",
     price: 2200,
     category: "Small",
   },
   {
     id: 10,
+    // image:
+    //   " https://images.pexels.com/photos/16345886/pexels-photo-16345886.jpeg?auto=compress&cs=tinysrgb&w=600",
     image:
-      " https://i.pinimg.com/564x/2e/d0/10/2ed010ddd607617512fad22ea677d63d.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-piedmont-orchid_white_yellow.jpg?v=1681766277",
     name: "Fagus",
     price: 2800,
     category: "Big",
@@ -82,7 +88,7 @@ const Data = [
   {
     id: 11,
     image:
-      "https://i.pinimg.com/564x/dc/c1/68/dcc1684c47fa7f4c1f0ee32fbcc22237.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_deep_purple.jpg?v=1681765771",
     name: "Larix",
     price: 3000,
     category: "Medium",
@@ -90,7 +96,7 @@ const Data = [
   {
     id: 12,
     image:
-      "https://i.pinimg.com/564x/96/22/03/962203ce3ab79413daa530bb06af346f.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_blue.jpg?v=1681760814",
     name: "Picea",
     price: 10000,
     category: "Small",

@@ -10,6 +10,7 @@ import Shop from "./components/shop/Shop";
 import Items from "./components/items/Items";
 import CheckoutFrom from "./components/shop/CheckoutFrom";
 import Contact from "./components/contact/Contact";
+import AboutPage from "./components/about/AboutPage";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -35,6 +36,7 @@ function App() {
             <Route path="/items" element={<Items />} />
             <Route path="/buy" element={<CheckoutFrom />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="*" element={<Page404 />} />
           </Routes>
         </BrowserRouter>

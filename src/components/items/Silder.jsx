@@ -9,32 +9,32 @@ const data = [
   {
     id: 1,
     image:
-      "https://i.pinimg.com/564x/42/0e/78/420e78390930fcc9bed85edb176829a8.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_pink.jpg?v=1680548652",
   },
   {
     id: 2,
     image:
-      "https://i.pinimg.com/564x/17/1b/9a/171b9abb4e18d607c3213c007d31e67d.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_yellow.jpg?v=1680545655",
   },
   {
     id: 3,
     image:
-      "https://i.pinimg.com/564x/9d/52/6e/9d526e6beace55761e2806c5ac24a2db.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-piedmont-orchid_white_purple.jpg?v=1680545920",
   },
   {
     id: 4,
     image:
-      "https://i.pinimg.com/564x/f8/47/01/f847019beb3cbaab94209b2e19948f23.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_purple.jpg?v=1680542287",
   },
   {
     id: 5,
     image:
-      "https://i.pinimg.com/564x/56/48/db/5648db70778c9a20ed5f3e7613661b6c.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_sunrise.jpg?v=1680545540",
   },
   {
     id: 6,
     image:
-      "https://i.pinimg.com/564x/b1/33/34/b133342285beb204560c462be04dc995.jpg",
+      "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-piedmont-orchid_white_yellow.jpg?v=1681766277",
   },
 ];
 
@@ -58,12 +58,14 @@ const Silder = () => {
         {data.map(({ id, image }) => {
           return (
             <SwiperSlide key={id} className="lg:p-8">
-              <img
-                src={image}
-                alt=""
-                className="mx-2 rounded-md object-fill shadow md:mx-14  md:h-full md:w-3/4  lg:h-5/6 lg:w-5/6"
-              />
-              <div className="primary absolute h-[58px] w-[63px] rounded-full transition-all ease-in-out hover:scale-110 md:right-14 md:top-4 lg:right-32 lg:top-20">
+              <div className="">
+                <img
+                  src={image}
+                  alt=""
+                  className="mx-2 rounded-md object-fill shadow md:mx-14  md:h-full md:w-3/4"
+                />
+              </div>
+              <div className="primary absolute h-[58px] w-[63px] rounded-full transition-all ease-in-out hover:scale-110 md:right-14 md:top-4 lg:right-40 lg:top-20">
                 <p className="my-4 gap-x-2 text-center text-xl font-bold text-white">
                   20%
                 </p>

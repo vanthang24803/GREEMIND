@@ -41,7 +41,7 @@ const ShopContainer = () => {
             return (
               <div className="group" key={id}>
                 <button
-                  className="absolute mx-5 mt-[24vh] hidden h-[40px] w-[32vh] rounded-sm bg-[#fffefedd] text-lg 
+                  className="absolute mx-5 mt-[38vh] hidden h-[40px] w-[32vh] rounded-sm bg-[#fffefedd] text-lg 
                     font-bold uppercase text-[#6aaeae] shadow transition-all ease-in-out group-hover:block md:mx-6 md:my-[22vh] 
                     md:w-[16vh] md:hover:-translate-y-2 lg:mx-4 lg:my-[40vh] lg:w-[40vh]"
                   onClick={() => dispatch(add(item))}
