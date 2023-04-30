@@ -27,12 +27,11 @@ const Popup = ({ hanldeModal }) => {
             placeholder="Enter your email"
             className="h-[54px] w-full rounded-3xl border-2 border-gray-400 px-4 font-rubik  text-sm"
           />
-
-          <button className="primary mt-4 block h-[42px] rounded-3xl font-rubik  hover:bg-gray-500  md:mx-20 md:mt-8 md:w-[180px] lg:absolute lg:mx-[20.5rem] lg:my-[0.35rem] lg:w-[120px]">
-            <Link to="/contact" className="text-black hover:text-white ">
+          <Link to="/contact" className="text-black hover:text-white ">
+            <button className="primary mt-4 block h-[42px] w-full rounded-3xl  font-rubik  hover:bg-gray-500 md:mx-20 md:mt-8 md:w-[180px] lg:absolute  lg:-mx-32 lg:my-[0.35rem] lg:w-[120px]">
               Subcribe
-            </Link>
-          </button>
+            </button>
+          </Link>
         </form>
       </div>
     </div>

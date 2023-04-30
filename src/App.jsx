@@ -9,6 +9,7 @@ import Forgot from "./components/login/Forgot";
 import Shop from "./components/shop/Shop";
 import Items from "./components/items/Items";
 import CheckoutFrom from "./components/shop/CheckoutFrom";
+import Contact from "./components/contact/Contact";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -33,6 +34,7 @@ function App() {
             <Route path="/shop" element={<Shop />} />
             <Route path="/items" element={<Items />} />
             <Route path="/buy" element={<CheckoutFrom />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Page404 />} />
           </Routes>
         </BrowserRouter>

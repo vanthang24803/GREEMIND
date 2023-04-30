@@ -93,29 +93,35 @@ const Navbar = () => {
         <div className="md:hidden">
           <ul className="h-100vh absolute left-0 top-20 w-[100%] bg-[#ffffffdd]  shadow-lg transition-all lg:flex">
             <li className="nav-mb">
-              <a href="/" className="text-lg hover:font-semibold">
-                Home
-              </a>
+              <Link to="/">
+                <a className="text-lg hover:font-semibold">Home</a>
+              </Link>
             </li>
             <li className="nav-mb">
-              <a href="#products" className="text-lg hover:font-semibold ">
-                Products
-              </a>
+              <Link to="/shop">
+                <a href="" className="text-lg hover:font-semibold ">
+                  Products
+                </a>
+              </Link>
             </li>
             <li className="nav-mb">
-              <a href="#contact" className="text-lg hover:font-semibold">
-                Contact
-              </a>
+              <Link to="/contact">
+                <a href="#contact" className="text-lg hover:font-semibold">
+                  Contact
+                </a>
+              </Link>
             </li>
             <li className="nav-mb">
-              <a href="#category" className="text-lg hover:font-semibold">
-                Category
-              </a>
+              <Link to="/items">
+                <a href="" className="text-lg hover:font-semibold">
+                  Category
+                </a>
+              </Link>
             </li>
             <li className="nav-mb">
-              <a href="#company" className="text-lg hover:font-semibold">
-                Company
-              </a>
+              <Link to="/about">
+                <a className="text-lg hover:font-semibold">Company</a>
+              </Link>
             </li>
             <li className="nav-mb">
               <Link to="/login">
