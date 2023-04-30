@@ -1,38 +1,40 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "/src/components/page/Navbar"
+import Navbar from "/src/components/page/Navbar";
 import Footer from "../page/Footer";
 import { useSelector } from "react-redux";
 import Checkout from "./Checkout";
 import PayItems from "./PayItems";
-import {
-  RiArrowRightSLine,
-} from "react-icons/ri";
+import { RiArrowRightSLine } from "react-icons/ri";
+import Popup from "./Popup";
+
 const CheckoutFrom = () => {
   const { cartItems, total } = useSelector((state) => state.cart);
+  const [modal, setModal] = useState(false);
+  const hanldeModal = () => {
+    setModal(!modal);
+  };
 
   return (
     <>
       <Navbar />
       <div className="flex flex-col px-12 py-4 md:flex-row">
         <div className="w-full basis-1/2">
-        <div className="md:mx-[2rem] my-4 flex lg:mx-[5.75rem]">
-          <Link to="/">
-            <p className="flex text-black">
-             Home
-              <RiArrowRightSLine className="mx-2 my-1" />{" "}
-            </p>
-          </Link>
-          <Link to="/shop">
-            <p className="flex text-black">
-              Shop
-              <RiArrowRightSLine className="mx-2 my-1" />
-            </p>
-          </Link>
-          <p className="flex">
-            Check out
-          </p>
-        </div>
+          <div className="my-4 flex md:mx-[2rem] lg:mx-[5.75rem]">
+            <Link to="/">
+              <p className="flex text-black">
+                Home
+                <RiArrowRightSLine className="mx-2 my-1" />{" "}
+              </p>
+            </Link>
+            <Link to="/shop">
+              <p className="flex text-black">
+                Shop
+                <RiArrowRightSLine className="mx-2 my-1" />
+              </p>
+            </Link>
+            <p className="flex">Check out</p>
+          </div>
           <div className="w-full  bg-gray-50 shadow-xl lg:mx-20 lg:w-5/6">
             <div className="border-b-[1px] border-gray-400 p-4 md:p-8">
               <h1 className="font-rubik text-4xl font-thin text-black">
@@ -129,12 +131,17 @@ const CheckoutFrom = () => {
                 <input type="radio" />
                 <p className="mx-4 text-sm">$5.00 Flate Rate</p>
               </form>
-              <button className="primary mb-14 h-[50px] w-full rounded-3xl font-medium hover:bg-gray-600 hover:text-white md:mx-12 md:w-[55%] lg:mx-24">
+              <button
+                className="primary mb-14 h-[50px] w-full rounded-3xl font-medium hover:bg-gray-600 hover:text-white md:mx-12 md:w-[55%] lg:mx-24"
+                onClick={hanldeModal}
+              >
                 Place Order
               </button>
+              {modal ? <Popup hanldeModal={hanldeModal} /> : null}
             </div>
           </div>
         </div>
+
         <div className="basis-1/2">
           <div className="mt-14 w-full md:mx-4 lg:w-3/4">
             <div className="border-gray border-t-2">
@@ -176,7 +183,7 @@ const CheckoutFrom = () => {
             })}
           </div>
           <Link to="/shop">
-            <button className="primary my-8 h-[50px] w-full rounded-3xl font-rubik font-bold text-black transition-all ease-in-out hover:bg-gray-400 hover:text-white lg:w-1/3">
+            <button className="primary my-8 h-[50px] w-full rounded-3xl font-rubik font-bold text-black transition-all ease-in-out hover:bg-gray-400 hover:text-white md:mx-8 lg:w-1/3">
               Back to Shop
             </button>
           </Link>

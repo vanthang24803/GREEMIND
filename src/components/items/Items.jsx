@@ -56,9 +56,7 @@ const Info = () => {
     shop,
     info,
     name,
-    price,
     title,
-    subprice,
     btnText,
     reviewText,
     addReviewText,
@@ -141,7 +139,7 @@ const Info = () => {
                   </button>
                 </div>
                 <div className="my-10 lg:mx-24 lg:my-0">
-                  <Link to="/checkout">
+                  <Link to="/buy">
                     <button
                       className="h-[55px] w-full rounded-2xl bg-[#93E686] font-rubik text-xl font-bold text-white 
                     transition-all ease-in-out hover:scale-110 md:w-[95%] lg:w-[320px]"
