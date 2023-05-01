@@ -19,6 +19,7 @@ export default {
      },
      fontFamily: {
       'rubik': ['Rubik', 'sans-serif'],
+      'domine': ['Domine', 'sans-serif'],
     }
     },
     

@@ -57,8 +57,6 @@ const Data = [
   },
   {
     id: 8,
-    // image:
-    //   "https://images.pexels.com/photos/15018891/pexels-photo-15018891.jpeg?auto=compress&cs=tinysrgb&w=600",
     image:
       "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_sunrise.jpg?v=1680545540",
     name: "Cedrus",
@@ -67,8 +65,6 @@ const Data = [
   },
   {
     id: 9,
-    // image:
-    //   "https://images.pexels.com/photos/14553895/pexels-photo-14553895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     image:
       "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-white_gloss-orchid_red.jpg?v=1681765994",
     name: "Euonymus",
@@ -77,8 +73,6 @@ const Data = [
   },
   {
     id: 10,
-    // image:
-    //   " https://images.pexels.com/photos/16345886/pexels-photo-16345886.jpeg?auto=compress&cs=tinysrgb&w=600",
     image:
       "https://cdn.shopify.com/s/files/1/0150/6262/products/the_sill-variant-piedmont-orchid_white_yellow.jpg?v=1681766277",
     name: "Fagus",

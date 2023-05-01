@@ -36,12 +36,12 @@ const NewNav = () => {
           </Link>
           <Link to="/blog">
             <li className="nav">
-              <a>Blogs</a>
+              <a>WorkShops</a>
             </li>
           </Link>
-          <Link to="/company">
+          <Link to="/about">
             <li className="nav">
-              <a>Company</a>
+              <a>About us</a>
             </li>
           </Link>
         </ul>
