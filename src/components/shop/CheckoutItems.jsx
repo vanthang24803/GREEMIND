@@ -37,7 +37,7 @@ const CheckoutItems = ({ cartItem }) => {
           onClick={() => dispatch(remove(cartItem))}
         />
         <p className="font-rubik text-base font-bold">
-          ₱ {(price * amount).toFixed(2)}
+          $ {(price * amount).toFixed(2)}
         </p>
       </div>
     </div>

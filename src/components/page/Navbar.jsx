@@ -112,15 +112,15 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-mb">
-              <Link to="/items">
+              <Link to="/workshops">
                 <a href="" className="text-lg hover:font-semibold">
-                  Category
+                  WorkShops
                 </a>
               </Link>
             </li>
             <li className="nav-mb">
               <Link to="/about">
-                <a className="text-lg hover:font-semibold">Company</a>
+                <a className="text-lg hover:font-semibold">About us</a>
               </Link>
             </li>
             <li className="nav-mb">

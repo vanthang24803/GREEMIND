@@ -14,19 +14,19 @@ const sell = {
       id: 1,
       image: Item1,
       name: "Natural Plants",
-      price: "₱ 1,400.00",
+      price: 140,
     },
     {
       id: 2,
       image: Item2,
       name: "Artificial Plants",
-      price: "₱ 900.00",
+      price: 90,
     },
     {
       id: 3,
       image: Item3,
       name: "Artificial Plants",
-      price: "₱ 3,500.00",
+      price: 350,
     },
   ],
 };
@@ -68,7 +68,7 @@ const Selling = () => {
                   className="mb-4 cursor-pointer transition hover:scale-105"
                 />
                 <p className="my-4 text-lg font-semibold">{name}</p>
-                <p className="my-2 text-gray-400">{price}</p>
+                <p className="my-2 text-gray-400 font-rubik">$ {price.toFixed(2)}</p>
               </div>
             </div>
           );

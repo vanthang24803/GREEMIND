@@ -46,7 +46,7 @@ const Checkout = () => {
                   <div className="flex">
                     <span className="mr-2 font-rubik text-lg">Total Cost:</span>
                     <p className="font-rubik text-lg font-medium">
-                      ₱ {total.toFixed(2)}
+                      $ {total.toFixed(2)}
                     </p>
                   </div>
                   <FaTrash
@@ -55,7 +55,7 @@ const Checkout = () => {
                   />
                 </div>
                 <Link to="/buy">
-                  <button className="my-8 h-[50px] w-full rounded-md bg-[#93E686] font-rubik text-lg font-bold text-white transition-all ease-in-out hover:scale-105 ">
+                  <button className="my-8 h-[50px] w-full rounded-md bg-[#00AB84] font-domine text-lg text-white transition-all ease-in-out hover:scale-105 ">
                     Check Out
                   </button>
                 </Link>

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Data from "./Data";
+import Data from "./DataGift";
 import { useDispatch } from "react-redux";
 import { add } from "../state/slice/CartSlice";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 
-const ShopContainer = () => {
+const GiftContainer = () => {
   const dispatch = useDispatch();
 
   const [items, setItems] = useState(Data);
@@ -16,8 +16,6 @@ const ShopContainer = () => {
 
     setItems(updatedItems);
   };
-  
-
   return (
     <>
       <div className="">
@@ -56,7 +54,7 @@ const ShopContainer = () => {
                     alt=""
                     className="w-full object-fill transition-all hover:cursor-pointer md:h-[27vh] lg:h-[50vh] "
                   />
-                  <p className="my-4 text-center text-xl font-bold md:text-start">
+                  <p className="my-4 text-center  font-domine text-xl  font-semibold md:text-start">
                     {name}
                   </p>
                   <p className="my-2 text-center text-gray-400 md:text-start">
@@ -69,19 +67,19 @@ const ShopContainer = () => {
         </div>
 
         <div className="my-12 flex h-[60px]  w-full justify-between border-b-[1px] border-t-[1px] border-gray-300">
-          <Link to="/">
+          <Link to="/shop">
             <button className="mx-4 flex h-[60px] w-[100px] items-center font-domine text-black md:mx-12">
               <HiArrowLongLeft className="mx-2 text-lg  transition-all ease-in-out hover:-translate-x-2" />{" "}
-              Home
+              Shop
             </button>
           </Link>
           <div className="flex items-center">
             <p className="mx-2 text-lg underline">1</p>
             <p className="mx-2 text-lg text-gray-400">2</p>
           </div>
-          <Link to="/gift">
+          <Link to="/items">
             <button className="mx-4 flex h-[60px] w-[100px] items-center font-domine md:mx-12 text-black">
-              Gift{" "}
+              Items{" "}
               <HiArrowLongRight className="mx-2 text-lg  transition-all ease-in-out hover:translate-x-2" />
             </button>
           </Link>
@@ -91,4 +89,4 @@ const ShopContainer = () => {
   );
 };
 
-export default ShopContainer;
+export default GiftContainer;

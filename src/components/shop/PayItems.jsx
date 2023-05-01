@@ -8,7 +8,7 @@ const PayItems = ({ cartItem }) => {
       <div className="mx-4 my-2">
         <p className="text-xl font-bold">{name}</p>
         <p className="my-1 font-rubik text-base text-gray-400">
-          ₱ {price.toFixed(2)}
+          $ {price.toFixed(2)}
         </p>
         <p className="font-rubik text-base text-gray-400">x{amount}</p>
       </div>

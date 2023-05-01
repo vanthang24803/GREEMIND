@@ -162,10 +162,10 @@ const CheckoutFrom = () => {
                 </div>
                 <div className="text-end">
                   <p className="my-2 font-rubik text-lg font-bold">
-                    ₱ {total.toFixed(2)}
+                    $ {total.toFixed(2)}
                   </p>
-                  <p className="my-2 font-rubik text-lg font-bold">₱ -10.00</p>
-                  <p className="my-2 font-rubik text-lg font-bold">₱ 10.00</p>
+                  <p className="my-2 font-rubik text-lg font-bold">$ -10.00</p>
+                  <p className="my-2 font-rubik text-lg font-bold">$ 10.00</p>
                 </div>
               </div>
               <div className="my-6 flex items-center justify-between border-b-2 border-black pb-8">

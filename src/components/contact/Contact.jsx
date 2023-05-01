@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Footer from "../page/Footer";
 import Navbar from "../page/Navbar";
 import { FiArrowUpRight } from "react-icons/fi";
 import Modal from "./Modal";
+import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
+
 const Contact = () => {
   const [modal, setModal] = useState(false);
   const hanldeModal = () => {
@@ -99,12 +102,26 @@ const Contact = () => {
             <button
               className="mt-12 flex h-[50px] w-full items-center justify-center border-2 border-black  bg-black font-medium
             text-white hover:bg-white hover:text-black"
-            onClick={hanldeModal}
+              onClick={hanldeModal}
             >
               Submit <FiArrowUpRight className="mx-1 text-lg" />
             </button>
             {modal ? <Modal hanldeModal={hanldeModal} /> : null}
           </div>
+        </div>
+        <div className="mt-10 flex h-[60px]  w-full justify-between border-b-[1px] border-t-[1px] border-gray-300">
+          <Link to="/">
+            <button className="mx-4 flex h-[60px] w-[100px] items-center font-domine text-black md:mx-12">
+              <HiArrowLongLeft className="mx-2 text-lg  transition-all ease-in-out hover:-translate-x-2" />{" "}
+              Home
+            </button>
+          </Link>
+          <Link to="/shop">
+            <button className="mx-4 flex h-[60px] w-[100px] items-center font-domine text-black md:mx-12">
+              Shop{" "}
+              <HiArrowLongRight className="mx-2 text-lg  transition-all ease-in-out hover:translate-x-2" />
+            </button>
+          </Link>
         </div>
       </section>
       <Footer />

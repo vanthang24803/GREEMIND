@@ -31,7 +31,7 @@ const data = {
 
 const Info = () => {
   const { isOpen } = useSelector((state) => state.checkout);
-  const numPrice = 2320.0;
+  const numPrice = 232.0;
   const [item, setItem] = useState(1);
   const [oldPrice, setOldPrice] = useState(numPrice);
   const [newPrice, setNewPrice] = useState(
@@ -109,11 +109,11 @@ const Info = () => {
 
               {/* Review Text */}
               <div className="flex items-center">
-                <p className="my-8 text-3xl font-bold text-[#72e3e3]">
-                  ₱ {newPrice.toFixed(2)}
+                <p className="my-8 text-3xl font-bold text-[#72e3e3] font-rubik">
+                  $ {newPrice.toFixed(2)}
                 </p>
                 <p className="mx-6 font-rubik text-xl font-semibold text-gray-400 line-through">
-                  ₱ {oldPrice.toFixed(2)}
+                  $ {oldPrice.toFixed(2)}
                 </p>
               </div>
 

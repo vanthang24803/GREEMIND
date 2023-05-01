@@ -50,7 +50,7 @@ const NewNav = () => {
       <div className="flex ">
         <div className="text-black" onClick={() => dispatch(open())}>
           <RiShoppingCart2Line className="icon" />
-          <div className="primary absolute right-[8%] top-[30%] z-10 h-4 w-4 rounded-full text-center  text-[12px] md:right-[25%] lg:right-[12%]">
+          <div className="primary absolute right-[8%] top-[30%] z-10 h-4 w-4 rounded-full text-center  text-[12px] md:right-[25%] lg:right-[12.5%]">
             {amount}
           </div>
         </div>
