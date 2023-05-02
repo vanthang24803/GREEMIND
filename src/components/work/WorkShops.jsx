@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../page/Navbar";
 import Footer from "../page/Footer";
-import {HiArrowLongRight} from "react-icons/hi2"
+import { HiArrowLongRight } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const data = {
   title: "Workshops & Events",
@@ -69,7 +70,7 @@ const data = {
 };
 
 const WorkShops = () => {
-  const { title, desc, image1 ,subtitle , content } = data;
+  const { title, desc, image1, subtitle, content } = data;
   return (
     <>
       <Navbar />
@@ -96,32 +97,34 @@ const WorkShops = () => {
           </div>
         </div>
 
-        <div className="md:p-10 pt-12 px-4">
-          <p className="md:text-5xl text-3xl font-domine">{subtitle}</p>
+        <div className="px-4 pt-12 md:p-10">
+          <p className="font-domine text-3xl md:text-5xl">{subtitle}</p>
         </div>
 
-        <div className="my-8 grid gap-4 md:my-0 md:grid-cols-2 md:gap-8  md:px-10 lg:grid-cols-3">
-          {content.map((item) => {
-            return (
-              <div
-                className="my-4  border-[1px] border-gray-400 md:my-0"
-                key={item.id}
-              >
-                <img src={item.image} alt="" className="w-full" />
-                <h1 className="px-6 py-4 font-domine text-4xl font-normal">
-                  {item.main}
-                </h1>
-                <p className="mx-6 font-domine text-xl italic text-gray-500">
-                  {item.time}
-                </p>
-                <p className="px-6 py-4 font-domine">{item.pragrap}</p>
-                <button className="mx-6 my-12 flex h-[60px] w-[180px] items-center justify-between font-domine hover:italic hover:text-[#00AB84]">
-                  RSVP on Eventbrite <HiArrowLongRight className="text-lg" />
-                </button>
-              </div>
-            );
-          })}
-        </div>
+        <Link to="/">
+          <div className="my-8 grid gap-4 md:my-0 md:grid-cols-2 md:gap-8  md:px-10 lg:grid-cols-3">
+            {content.map((item) => {
+              return (
+                <div
+                  className="my-4  border-[1px] border-gray-400 md:my-0"
+                  key={item.id}
+                >
+                  <img src={item.image} alt="" className="w-full" />
+                  <h1 className="px-6 py-4 font-domine text-4xl font-normal">
+                    {item.main}
+                  </h1>
+                  <p className="mx-6 font-domine text-xl italic text-gray-500">
+                    {item.time}
+                  </p>
+                  <p className="px-6 py-4 font-domine">{item.pragrap}</p>
+                  <button className="mx-6 my-12 flex h-[60px] w-[180px] items-center justify-between font-domine hover:italic hover:text-[#00AB84]">
+                    RSVP on Eventbrite <HiArrowLongRight className="text-lg" />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </Link>
       </div>
       <Footer />
     </>

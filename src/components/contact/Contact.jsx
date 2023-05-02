@@ -8,9 +8,10 @@ import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 
 const Contact = () => {
   const [modal, setModal] = useState(false);
-  const hanldeModal = () => {
-    setModal(!modal);
-  };
+  const hanldeModal = (event) => {
+     event.preventDefault();
+    setModal(!modal)
+  }
   return (
     <>
       <Navbar />
@@ -21,11 +22,12 @@ const Contact = () => {
           </h1>
         </div>
 
-        <div className="">
-          <form className="flex flex-col py-8 md:flex-row">
+        <form onSubmit={hanldeModal}>
+          <div className="flex flex-col py-8 md:flex-row">
             <div className="w-full px-4 md:w-1/2 ">
               <p className="my-2 font-rubik text-lg font-medium">Name</p>
               <input
+                required
                 type="text"
                 placeholder="May Nguyen"
                 className="h-[60px] w-full border-2 border-white bg-[#FAF9F7] px-4"
@@ -34,13 +36,14 @@ const Contact = () => {
             <div className="my-4 w-full px-4 md:my-0 md:w-1/2">
               <p className="my-2 font-rubik text-lg font-medium">Email</p>
               <input
+                required
                 type="email"
                 placeholder="maymay@mail.com"
                 className="h-[60px] w-full border-2 border-white  bg-[#FAF9F7]  px-4"
               />
             </div>
-          </form>
-          <form className="flex flex-col pb-8 md:flex-row">
+          </div>
+          <div className="flex flex-col pb-8 md:flex-row">
             <div className="w-full px-4 md:w-1/2">
               <p className="my-2 font-rubik text-lg font-medium">Address</p>
               <input
@@ -57,9 +60,9 @@ const Contact = () => {
                 className="h-[60px] w-full border-2 border-white  bg-[#FAF9F7]  px-4"
               />
             </div>
-          </form>
+          </div>
 
-          <form className="flex flex-col px-4 pb-8">
+          <div className="flex flex-col px-4 pb-8">
             <p className="my-2 font-rubik text-lg font-medium">
               What would you like to chat about?
             </p>
@@ -73,9 +76,9 @@ const Contact = () => {
               <option value="6">Others</option>
               <option value="5">Just want say hi!</option>
             </select>
-          </form>
+          </div>
 
-          <form className="flex flex-col px-4 pb-8">
+          <div className="flex flex-col px-4 pb-8">
             <p className="my-2 font-rubik text-lg font-medium">
               What is your estimated budget?
             </p>
@@ -89,7 +92,7 @@ const Contact = () => {
               <option value="6">Others</option>
               <option value="5">$500.000</option>
             </select>
-          </form>
+          </div>
 
           <div className="px-4 pb-8">
             <p className="my-2 font-rubik text-lg font-medium ">Message</p>
@@ -98,17 +101,21 @@ const Contact = () => {
               rows="10"
               placeholder="Your Message"
               className="w-full border-2 border-white  bg-[#FAF9F7]  px-4 font-rubik text-lg"
+              required
             />
+          </div>
+          <div className="">
             <button
+              type="submit"
               className="mt-12 flex h-[50px] w-full items-center justify-center border-2 border-black  bg-black font-medium
             text-white hover:bg-white hover:text-black"
-              onClick={hanldeModal}
             >
               Submit <FiArrowUpRight className="mx-1 text-lg" />
             </button>
-            {modal ? <Modal hanldeModal={hanldeModal} /> : null}
           </div>
-        </div>
+          {modal ? <Modal hanldeModal={hanldeModal} /> : null}
+        </form>
+
         <div className="mt-10 flex h-[60px]  w-full justify-between border-b-[1px] border-t-[1px] border-gray-300">
           <Link to="/">
             <button className="mx-4 flex h-[60px] w-[100px] items-center font-domine text-black md:mx-12">

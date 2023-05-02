@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "/src/assets/Logo.svg";
 import { RiShoppingCart2Line, RiUserLine, RiMenu2Fill } from "react-icons/ri";
+import { FiMapPin } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { open } from "/src/components/state/slice/CheckoutSlice"
 
@@ -34,7 +35,7 @@ const NewNav = () => {
               <a>Contact</a>
             </li>
           </Link>
-          <Link to="/blog">
+          <Link to="/workshops">
             <li className="nav">
               <a>WorkShops</a>
             </li>
@@ -58,9 +59,7 @@ const NewNav = () => {
           <RiUserLine className="icon hidden md:block" />
         </Link>
         <span className="mx-4 hidden h-[20px] w-[2px] bg-black md:block"></span>
-        <button className="transition-all duration-700 ease-in-out">
-          <RiMenu2Fill className="md:icon hidden md:block " />
-        </button>
+        <FiMapPin className="icon hidden md:block" />
       </div>
     </nav>
   );

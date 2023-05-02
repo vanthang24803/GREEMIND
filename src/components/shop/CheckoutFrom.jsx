@@ -10,7 +10,8 @@ import Popup from "./Popup";
 const CheckoutFrom = () => {
   const { cartItems, total } = useSelector((state) => state.cart);
   const [modal, setModal] = useState(false);
-  const hanldeModal = () => {
+  const hanldeModal = (event) => {
+     event.preventDefault();
     setModal(!modal);
   };
 
@@ -18,7 +19,9 @@ const CheckoutFrom = () => {
     <>
       <Navbar />
       <div className="flex flex-col px-12 py-4 md:flex-row">
-        <div className="w-full basis-1/2">
+        <form className="w-full basis-1/2"
+          onSubmit={hanldeModal}
+        >
           <div className="my-4 flex md:mx-[2rem] lg:mx-[5.75rem]">
             <Link to="/">
               <p className="flex text-black">
@@ -42,36 +45,43 @@ const CheckoutFrom = () => {
               <form className="my-8">
                 <span className="font-rubik font-medium">Email Address</span>
                 <input
+                  required
                   type="text"
                   className="mb-8 mt-2 h-[40px] w-full rounded border-b-2 border-gray-400"
                 />
                 <span className="font-rubik font-medium">First Name</span>
                 <input
+                  required
                   type="text"
                   className="mb-8 mt-2 h-[40px] w-full rounded border-b-2 border-gray-400"
                 />
                 <span className="font-rubik font-medium">Last Name</span>
                 <input
+                  required
                   type="text"
                   className="mb-8 mt-2 h-[40px] w-full rounded border-b-2 border-gray-400"
                 />
                 <span className="font-rubik font-medium">Company Name</span>
                 <input
+                  required
                   type="text"
                   className="mb-8 mt-2 h-[40px] w-full rounded border-b-2 border-gray-400"
                 />
                 <span className="font-rubik font-medium">Street Address</span>
                 <input
+                  required
                   type="text"
                   className="mb-8 mt-2 h-[40px] w-full rounded border-b-2 border-gray-400"
                 />
                 <span className="font-rubik font-medium">City</span>
                 <input
+                  required
                   type="text"
                   className="mb-8 mt-2 h-[40px] w-full rounded border-b-2 border-gray-400"
                 />
                 <span className="font-rubik font-medium">State/Province</span>
                 <input
+                  required
                   type="number"
                   className="mb-8 mt-2 h-[40px] w-full rounded border-b-2 border-gray-400"
                 />
@@ -79,11 +89,13 @@ const CheckoutFrom = () => {
                   Zip / Postal Code
                 </span>
                 <input
+                  required
                   type="number"
                   className="mb-8 mt-2 h-[40px] w-full rounded border-b-2 border-gray-400"
                 />
                 <span className="font-rubik font-medium">Phone Number</span>
                 <input
+                  required
                   type="number"
                   className="mb-8 mt-2 h-[40px] w-full rounded border-b-2 border-gray-400"
                 />
@@ -126,20 +138,21 @@ const CheckoutFrom = () => {
               <h1 className="font-rubik text-4xl font-bold text-black">
                 Shipping Methods
               </h1>
-              <form className="mt-8 flex pb-10">
-                <input type="radio" />
+              <div className="mt-8 flex pb-10">
+                <input
+                  required type="radio" />
                 <p className="mx-4 text-sm">$5.00 Flate Rate</p>
-              </form>
+              </div>
               <button
+                type="submit"
                 className="primary mb-14 h-[50px] w-full rounded-3xl font-medium hover:bg-gray-600 hover:text-white md:mx-12 md:w-[55%] lg:mx-24"
-                onClick={hanldeModal}
               >
                 Place Order
               </button>
               {modal ? <Popup hanldeModal={hanldeModal} /> : null}
             </div>
           </div>
-        </div>
+        </form>
 
         <div className="basis-1/2">
           <div className="mt-14 w-full md:mx-4 lg:w-3/4">

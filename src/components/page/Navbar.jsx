@@ -8,6 +8,7 @@ import {
   RiCloseLine,
 } from "react-icons/ri";
 
+import { FiMapPin } from "react-icons/fi";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
@@ -77,14 +78,15 @@ const Navbar = () => {
           <RiUserLine className="icon hidden md:block" />
         </Link>
         <span className="mx-4 hidden h-[20px] w-[2px] bg-black md:block"></span>
+        <FiMapPin className="icon hidden md:block" />
         <button
           onClick={handleOpen}
           className="transition-all duration-700 ease-in-out"
         >
           {open == true ? (
-            <RiCloseLine className="ml-[11rem] text-[25px] transition ease-in-out hover:scale-125 hover:cursor-pointer md:ml-0 lg:text-[20px] " />
+            <RiCloseLine className="ml-[11rem] block text-[25px] transition ease-in-out hover:scale-125 hover:cursor-pointer md:ml-0 md:hidden lg:text-[20px] " />
           ) : (
-            <RiMenu2Fill className="icon z-10" />
+            <RiMenu2Fill className="icon z-10 block md:hidden" />
           )}
         </button>
       </div>
