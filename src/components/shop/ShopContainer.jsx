@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Data from "./Data";
 import { useDispatch } from "react-redux";
@@ -7,8 +7,12 @@ import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 
 const ShopContainer = () => {
   const dispatch = useDispatch();
-
-  const [items, setItems] = useState(Data);
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    setTimeout(() => {
+      setItems(Data);
+    }, 500);
+  }, []);
   const fiterItem = (categoryItem) => {
     const updatedItems = Data.filter((item) => {
       return item.category === categoryItem;
@@ -16,7 +20,6 @@ const ShopContainer = () => {
 
     setItems(updatedItems);
   };
-  
 
   return (
     <>
@@ -80,7 +83,7 @@ const ShopContainer = () => {
             <p className="mx-2 text-lg text-gray-400">2</p>
           </div>
           <Link to="/gift">
-            <button className="mx-4 flex h-[60px] w-[100px] items-center font-domine md:mx-12 text-black">
+            <button className="mx-4 flex h-[60px] w-[100px] items-center font-domine text-black md:mx-12">
               Gift{" "}
               <HiArrowLongRight className="mx-2 text-lg  transition-all ease-in-out hover:translate-x-2" />
             </button>

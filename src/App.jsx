@@ -12,6 +12,7 @@ import CheckoutFrom from "./components/shop/CheckoutFrom";
 import Contact from "./components/contact/Contact";
 import AboutPage from "./components/about/AboutPage";
 import Gift from "./components/gift/Gift";
+import WorkShops from "./components/work/WorkShops";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -39,6 +40,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/gift" element={<Gift />} />
+            <Route path="/workshops" element={<WorkShops />} />
             <Route path="*" element={<Page404 />} />
           </Routes>
         </BrowserRouter>
