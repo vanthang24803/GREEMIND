@@ -78,7 +78,9 @@ const Navbar = () => {
           <RiUserLine className="icon hidden md:block" />
         </Link>
         <span className="mx-4 hidden h-[20px] w-[2px] bg-black md:block"></span>
-        <FiMapPin className="icon hidden md:block" />
+        <Link to="/map" className="text-black">
+          <FiMapPin className="icon hidden md:block" />
+        </Link>
         <button
           onClick={handleOpen}
           className="transition-all duration-700 ease-in-out"
