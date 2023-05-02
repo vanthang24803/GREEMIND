@@ -1,8 +1,8 @@
-import React from 'react'
-import Navbar from '../page/Navbar'
-import Footer from '../page/Footer'
-import Box from './Box'
-import Events from "../work/Events"
+import React from "react";
+import Navbar from "../page/Navbar";
+import Footer from "../page/Footer";
+import Box from "./Box";
+import Events from "../work/Events";
 const data = [
   {
     id: 1,
@@ -37,24 +37,46 @@ const data = [
       "https://cdn.sanity.io/images/y346iw48/production/a32c7fdf868e8b0c9c85a8f5260093fdb1a8a5db-1500x1000.jpg?w=400&auto=format",
   },
 ];
+
+const ad = [
+  {
+    id: 1,
+    image:
+      "https://cdn.sanity.io/images/y346iw48/production/4b5c3c7c2615c4378787839179de666cae90d783-645x600.svg?auto=format",
+    title: "In-Store Exclusives",
+    desc: "Sourced from local growers support family-owned businesses.",
+  },
+  {
+    id: 2,
+    image:
+      "https://cdn.sanity.io/images/y346iw48/production/6363ae026f79e812a3508458112d0cd4ea89145a-645x600.svg?auto=format",
+    title: "Same Day Delivery",
+    desc: "All plants available for curbside pick-up or local delivery.",
+  },
+  {
+    id: 3,
+    image:
+      "https://cdn.sanity.io/images/y346iw48/production/2cd3e20022e031ea46105adaf547e2f8fe0515c3-927x648.jpg?auto=format",
+    title: "Re-Potting Service",
+    desc: "Pick your plant, pick your planter. We pot it for you for free.",
+  },
+];
+
 const Map = () => {
   return (
     <>
       <Navbar />
       <div className="">
-        <div className="flex flex-col md:my-4 md:flex-row md:px-10 md:pb-20 md:pt-10 ">
-          <div className="mb-20 md:mb-0 md:basis-1/2 lg:basis-1/5">
-            <Box />
-          </div>
-          <div className="bg-[#E8F8FA] p-4 md:basis-1/2 lg:basis-4/5 lg:p-10">
-            <h1 className="font-rubik text-4xl font-bold lg:text-7xl  ">
+        <div className="flex flex-col md:my-4 md:px-10 md:pb-20 md:pt-10 lg:flex-row ">
+          <div className="bg-[#E8F8FA] p-4 lg:basis-1/3  lg:p-10">
+            <h1 className="p-4 font-serif  text-6xl lg:text-8xl  ">
               Store Locator
             </h1>
-            <p className="mt-4 font-domine text-sm lg:text-lg">
+            <p className="m-4 font-domine text-sm lg:text-base">
               Welcome to your happy place. We've got all your plant needs
               covered. Pick your plant, pick your planter. We pot it for you.
             </p>
-            <div className="my-8 flex lg:mb-0 lg:mt-4 ">
+            <div className="mx-4 my-4 flex lg:my-4 ">
               <button className="h-[60px] w-[160px] bg-[#00AB84] font-domine text-white hover:bg-[#0f7960] md:mx-0 md:w-[110px] lg:w-[180px]">
                 Workshops
               </button>
@@ -63,16 +85,19 @@ const Map = () => {
               </button>
             </div>
           </div>
+          <div className="mb-20 md:mb-0 md:basis-1/2 lg:basis-2/3">
+            <Box />
+          </div>
         </div>
 
-        <div className="border-t-[1px] border-gray-300 ">
+        <div className="mt-12 border-t-[1px] border-gray-300">
           <div className="flex flex-col lg:flex-row">
             <div className="mx-4 my-8 lg:basis-1/2">
               <h1 className="m-4 font-domine text-4xl">New York</h1>
               {data.map((item) => {
                 return (
                   <div
-                    className="flex items-center py-4 border-y-[1px] border-gray-200"
+                    className="flex items-center border-y-[1px] border-gray-200 py-4"
                     key={item.id}
                   >
                     <img
@@ -154,8 +179,26 @@ const Map = () => {
           </div>
         </div>
 
+        <div className="m-4 flex flex-col lg:flex-row">
+          {ad.map((list) => {
+            return (
+              <div className="my-4 md:mx-28 lg:mx-0" key={list.id}>
+                <img
+                  src={list.image}
+                  alt=""
+                  className="my-4 h-3/4 w-[420px] md:mx-10"
+                />
+                <div className="md:mx-10">
+                  <h3 className="text-2xl font-domine font-medium my-2">{list.title}</h3>
+                  <p className="font-domine text-gray-500 mr-10">{list.desc}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
         <div className="bg-[#efebe6] py-10">
-          <div className="px-4 pt-12 md:p-10">
+          <div className="px-4 pt-12  md:p-10">
             <p className="font-domine text-3xl md:text-5xl">Upcoming Events</p>
           </div>
           <Events />
@@ -164,6 +207,6 @@ const Map = () => {
       <Footer />
     </>
   );
-}
+};
 
-export default Map
+export default Map;
