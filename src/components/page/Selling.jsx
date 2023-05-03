@@ -47,7 +47,7 @@ const Selling = () => {
           {subtitle}
         </p>
         <Link to="/shop">
-          <button className="primary mx-20 my-8 flex h-[40px] w-[160px] items-center justify-center rounded-md font-medium text-black shadow  transition hover:scale-110 md:mx-0 md:my-8 lg:my-4">
+          <button className="primary mx-[4.4rem] my-8 flex h-[40px] w-[160px] items-center justify-center rounded-md font-medium text-black shadow  transition hover:scale-110 md:mx-0 md:my-8 lg:my-4">
             {btnText}
             <RiArrowRightLine className="ml-2 text-[18px] transition ease-in-out hover:translate-x-1" />
           </button>
@@ -58,7 +58,7 @@ const Selling = () => {
           const { name, price, image } = brand;
           return (
             <div
-              className="my-4 flex px-2 md:m-4 md:my-0 md:px-0 lg:mx-12 mx-7"
+              className="my-4 flex px-2 md:mx-4 md:my-0 md:px-0 lg:mx-12 mx-7"
               key={index}
             >
               <div className="">
