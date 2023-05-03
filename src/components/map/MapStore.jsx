@@ -10,8 +10,8 @@ const MapStore = () => {
   }, []);
 
   const style = {
-    width: windowWidth > 1023 ? "800px" : "100%",
-    height: windowWidth > 1023 ? "110vh" : "300px",
+    width: windowWidth > 1023 ? "100%" : "100%",
+    height: windowWidth > 1023 ? "122vh" : "300px",
   };
 
   return (
@@ -19,7 +19,7 @@ const MapStore = () => {
       initialViewState={{
         latitude: 40.73061,
         longitude: -73.935242,
-        zoom: 6,
+        zoom: 12,
       }}
       style={style}
       mapStyle="mapbox://styles/mapbox/outdoors-v12"

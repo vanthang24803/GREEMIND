@@ -21,14 +21,15 @@ const Popup = ({ hanldeModal }) => {
             email below to join our email newsletter today.
           </p>
         </div>
-        <form action="" className="my-12 flex flex-col px-6 lg:flex-row">
+        <form action="" className="my-6 flex flex-col px-6 lg:flex-row">
           <input
             type="email"
             placeholder="Enter your email"
             className="h-[54px] w-full rounded-3xl border-2 border-gray-400 px-4 font-rubik  text-sm"
+            
           />
           <Link to="/contact" className="text-black hover:text-white ">
-            <button className="primary mt-4 block h-[42px] w-full rounded-3xl  font-rubik  hover:bg-gray-500 md:mx-20 md:mt-8 md:w-[180px] lg:absolute  lg:-mx-32 lg:my-[0.35rem] lg:w-[120px]">
+            <button  className="primary mt-4 block h-[42px] w-full rounded-3xl  font-rubik  hover:bg-gray-500 md:mx-20 md:mt-8 md:w-[180px] lg:absolute  lg:-mx-32 lg:my-[0.35rem] lg:w-[120px]">
               Subcribe
             </button>
           </Link>

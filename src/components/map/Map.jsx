@@ -4,6 +4,7 @@ import Footer from "../page/Footer";
 import Box from "./Box";
 import Events from "../work/Events";
 import { Link } from "react-router-dom";
+import DataMap from "./DataMap";
 const data = [
   {
     id: 1,
@@ -39,29 +40,6 @@ const data = [
   },
 ];
 
-const ad = [
-  {
-    id: 1,
-    image:
-      "https://cdn.sanity.io/images/y346iw48/production/4b5c3c7c2615c4378787839179de666cae90d783-645x600.svg?auto=format",
-    title: "In-Store Exclusives",
-    desc: "Sourced from local growers support family-owned businesses.",
-  },
-  {
-    id: 2,
-    image:
-      "https://cdn.sanity.io/images/y346iw48/production/6363ae026f79e812a3508458112d0cd4ea89145a-645x600.svg?auto=format",
-    title: "Same Day Delivery",
-    desc: "All plants available for curbside pick-up or local delivery.",
-  },
-  {
-    id: 3,
-    image:
-      "https://cdn.sanity.io/images/y346iw48/production/2cd3e20022e031ea46105adaf547e2f8fe0515c3-927x648.jpg?auto=format",
-    title: "Re-Potting Service",
-    desc: "Pick your plant, pick your planter. We pot it for you for free.",
-  },
-];
 
 const Map = () => {
   return (
@@ -188,25 +166,7 @@ const Map = () => {
           </div>
         </div>
 
-        <div className="m-4 flex flex-col lg:flex-row">
-          {ad.map((list) => {
-            return (
-              <div className="my-4 md:mx-28 lg:mx-0" key={list.id}>
-                <img
-                  src={list.image}
-                  alt=""
-                  className="my-4 h-3/4 w-[420px] md:mx-10"
-                />
-                <div className="md:mx-10">
-                  <h3 className="my-2 font-domine text-2xl font-medium">
-                    {list.title}
-                  </h3>
-                  <p className="mr-10 font-domine text-gray-500">{list.desc}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+       <DataMap />
 
         <div className="bg-[#efebe6] py-10">
           <div className="px-4 pt-12  md:p-10">

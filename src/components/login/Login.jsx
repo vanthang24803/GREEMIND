@@ -68,13 +68,13 @@ const Login = () => {
               </div>
 
               <form className="m-10 flex-row">
-                <input type="text" placeholder="Name" className="input" />
-                <input type="email" placeholder="Email" className="input" />
-                <input type="text" placeholder="Password" className="input" />
+                <input type="text" required placeholder="Name" className="input" />
+                <input type="email" required placeholder="Email" className="input" />
+                <input type="text" required placeholder="Password" className="input" />
               </form>
 
               <div className="">
-                <button
+                <button type="submit"
                   className="mx-10 my-0 h-[55px] w-[32vh] rounded-xl bg-gray-700 text-base font-bold text-white transition-all ease-in hover:scale-105 md:my-2 md:w-[27.5vh] lg:w-[67.5vh]"
                   onClick={hanldeModal}
                 >
