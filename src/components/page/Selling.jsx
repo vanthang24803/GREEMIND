@@ -58,7 +58,7 @@ const Selling = () => {
           const { name, price, image } = brand;
           return (
             <div
-              className="my-4 flex px-2 md:m-4 md:my-0 md:px-0 lg:mx-12"
+              className="my-4 flex px-2 md:m-4 md:my-0 md:px-0 lg:mx-12 mx-7"
               key={index}
             >
               <div className="">

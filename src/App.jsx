@@ -14,6 +14,7 @@ import AboutPage from "./components/about/AboutPage";
 import Gift from "./components/gift/Gift";
 import WorkShops from "./components/work/WorkShops";
 import Map from "./components/map/Map";
+import Store from "./components/map/Store";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -43,6 +44,7 @@ function App() {
             <Route path="/gift" element={<Gift />} />
             <Route path="/workshops" element={<WorkShops />} />
             <Route path="/map" element={<Map />} />
+            <Route path="/store" element={<Store />} />
             <Route path="*" element={<Page404 />} />
           </Routes>
         </BrowserRouter>

@@ -65,9 +65,9 @@ const Silder = () => {
                   className="mx-2 rounded-md object-fill shadow md:mx-14  md:h-full md:w-3/4"
                 />
               </div>
-              <div className="primary absolute h-[58px] w-[63px] rounded-full transition-all ease-in-out hover:scale-110 md:right-14 md:top-4 lg:right-40 lg:top-20">
-                <p className="my-4 gap-x-2 text-center text-xl font-bold text-white">
-                  20%
+              <div className="hidden  bg-[#00AB84] absolute h-[60px] w-[62px] rounded-full transition-all ease-in-out hover:scale-110 md:right-14 md:top-4 lg:right-44 lg:top-20 md:flex justify-center items-center">
+                <p className="text-lg font-bold text-white font-domine">
+                  20% 
                 </p>
               </div>
             </SwiperSlide>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "/src/assets/Logo.svg";
 import {
   RiFacebookCircleFill,
@@ -51,20 +52,31 @@ const Footer = () => {
           <h3 className="mt-2 text-center text-[14px] text-gray-500 md:pb-2 md:text-start lg:pb-4">
             {subtitle}
           </h3>
-          <ul className="mx-[6.25rem] flex md:mx-0">
-            <li className="hover:cursor-pointer ">
-              <RiFacebookCircleFill className="icon-ft" />
-            </li>
-            <li className="hover:cursor-pointer ">
-              <RiTwitterFill className="icon-ft " />
-            </li>
-            <li className="hover:cursor-pointer ">
-              <RiYoutubeFill className="icon-ft " />
-            </li>
-            <li className="hover:cursor-pointer ">
-              <RiInstagramFill className="icon-ft " />
-            </li>
-          </ul>
+          <div className="mx-[6.25rem] flex md:mx-0">
+            <div className="hover:cursor-pointer ">
+              <Link
+                to="https://www.facebook.com/songkhac.hoccach.52/"
+                className="text-black"
+              >
+                <RiFacebookCircleFill className="icon-ft" />
+              </Link>
+            </div>
+            <div className="hover:cursor-pointer ">
+              <Link to="https://twitter.com/" className="text-black">
+                <RiTwitterFill className="icon-ft " />
+              </Link>
+            </div>
+            <div className="hover:cursor-pointer ">
+              <Link to="https://youtube.com/" className="text-black">
+                <RiYoutubeFill className="icon-ft " />
+              </Link>
+            </div>
+            <div className="hover:cursor-pointer ">
+              <Link to="https://instagram.com/" className="text-black">
+                <RiInstagramFill className="icon-ft " />
+              </Link>
+            </div>
+          </div>
         </div>
         <div className="flex flex-col text-center md:mx-[10%] md:flex-row md:text-start lg:mx-[50%]">
           {main.map(({ id, title, ops1, ops2, ops3 }) => {
@@ -73,11 +85,11 @@ const Footer = () => {
                 <h1 className="my-6 font-bold hover:cursor-context-menu hover:underline">
                   {title}
                 </h1>
-                <ul>
-                  <li className="social">{ops1}</li>
-                  <li className="social">{ops2}</li>
-                  <li className="social">{ops3}</li>
-                </ul>
+                <div>
+                  <div className="social">{ops1}</div>
+                  <div className="social">{ops2}</div>
+                  <div className="social">{ops3}</div>
+                </div>
               </div>
             );
           })}

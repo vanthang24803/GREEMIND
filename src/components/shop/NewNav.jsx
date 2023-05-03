@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "/src/assets/Logo.svg";
-import { RiShoppingCart2Line, RiUserLine, RiMenu2Fill } from "react-icons/ri";
+import { RiShoppingCart2Line, RiUserLine } from "react-icons/ri";
 import { FiMapPin } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
-import { open } from "/src/components/state/slice/CheckoutSlice"
+import { open } from "/src/components/state/slice/CheckoutSlice";
 
 const NewNav = () => {
   const dispatch = useDispatch();
@@ -13,39 +13,41 @@ const NewNav = () => {
   return (
     <nav className="sticky top-0 z-10 flex max-w-screen-2xl justify-between p-10 ">
       <div className="">
-        <a href="/">
-          <img src={Logo} alt="" className="h-auto w-full" />
-        </a>
+        <NavLink to="/">
+          <p>
+            <img src={Logo} alt="" className="h-auto w-full" />
+          </p>
+        </NavLink>
       </div>
 
       <div className="hidden lg:mx-20 lg:block">
-        <ul className="lg:flex">
-          <Link to="/">
-            <li className="nav">
-              <a href="/">Home</a>
-            </li>
-          </Link>
-          <Link to="/shop">
-            <li className="nav">
-              <a>Products</a>
-            </li>
-          </Link>
-          <Link to="/contact">
-            <li className="nav">
-              <a>Contact</a>
-            </li>
-          </Link>
-          <Link to="/workshops">
-            <li className="nav">
-              <a>WorkShops</a>
-            </li>
-          </Link>
-          <Link to="/about">
-            <li className="nav">
-              <a>About us</a>
-            </li>
-          </Link>
-        </ul>
+        <div className="lg:flex">
+          <NavLink to="/">
+            <div className="nav">
+              <p>Home</p>
+            </div>
+          </NavLink>
+          <NavLink to="/shop">
+            <div className="nav">
+              <p>Products</p>
+            </div>
+          </NavLink>
+          <NavLink to="/contact">
+            <div className="nav">
+              <p>Contact</p>
+            </div>
+          </NavLink>
+          <NavLink to="/workshops">
+            <div className="nav">
+              <p>WorkShops</p>
+            </div>
+          </NavLink>
+          <NavLink to="/about">
+            <div className="nav">
+              <p>About us</p>
+            </div>
+          </NavLink>
+        </div>
       </div>
 
       <div className="flex ">
@@ -55,13 +57,13 @@ const NewNav = () => {
             {amount}
           </div>
         </div>
-        <Link to="/login" className="text-black">
+        <NavLink to="/login" className="text-black">
           <RiUserLine className="icon hidden md:block" />
-        </Link>
+        </NavLink>
         <span className="mx-4 hidden h-[20px] w-[2px] bg-black md:block"></span>
-        <Link to="/map" className="text-black">
+        <NavLink to="/map" className="text-black">
           <FiMapPin className="icon hidden md:block" />
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );

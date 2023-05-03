@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "/src/assets/Logo.svg";
 import {
   RiShoppingCart2Line,
@@ -41,46 +41,46 @@ const Navbar = () => {
       </div>
 
       <div className="hidden lg:mx-20 lg:block">
-        <ul className="lg:flex">
-          <Link to="/">
-            <li className="nav">
-              <a href="/">Home</a>
-            </li>
-          </Link>
-          <Link to="/shop">
-            <li className="nav">
-              <a>Products</a>
-            </li>
-          </Link>
-          <Link to="/contact">
-            <li className="nav">
-              <a>Contact</a>
-            </li>
-          </Link>
-          <Link to="/workshops">
-            <li className="nav">
-              <a>WorkShops</a>
-            </li>
-          </Link>
-          <Link to="/about">
-            <li className="nav">
-              <a>About Us</a>
-            </li>
-          </Link>
-        </ul>
+        <div className="lg:flex">
+          <NavLink to="/">
+            <div className="nav">
+              <p>Home</p>
+            </div>
+          </NavLink>
+          <NavLink to="/shop">
+            <div className="nav">
+              <p>Products</p>
+            </div>
+          </NavLink>
+          <NavLink to="/contact">
+            <div className="nav">
+              <p>Contact</p>
+            </div>
+          </NavLink>
+          <NavLink to="/workshops">
+            <div className="nav">
+              <p>WorkShops</p>
+            </div>
+          </NavLink>
+          <NavLink to="/about">
+            <div className="nav">
+              <p>About Us</p>
+            </div>
+          </NavLink>
+        </div>
       </div>
 
       <div className="flex ">
-        <Link to="/shop" className="text-black">
+        <NavLink to="/shop" className="text-black">
           <RiShoppingCart2Line className="md:icon hidden md:block" />
-        </Link>
-        <Link to="/login" className="text-black">
+        </NavLink>
+        <NavLink to="/login" className="text-black">
           <RiUserLine className="icon hidden md:block" />
-        </Link>
+        </NavLink>
         <span className="mx-4 hidden h-[20px] w-[2px] bg-black md:block"></span>
-        <Link to="/map" className="text-black">
+        <NavLink to="/map" className="text-black">
           <FiMapPin className="icon hidden md:block" />
-        </Link>
+        </NavLink>
         <button
           onClick={handleOpen}
           className="transition-all duration-700 ease-in-out"
@@ -95,44 +95,44 @@ const Navbar = () => {
 
       {open ? (
         <div className="md:hidden">
-          <ul className="h-100vh absolute left-0 top-20 w-[100%] bg-[#ffffffdd]  shadow-lg transition-all lg:flex">
-            <li className="nav-mb">
-              <Link to="/">
-                <a className="text-lg hover:font-semibold">Home</a>
-              </Link>
-            </li>
-            <li className="nav-mb">
-              <Link to="/shop">
-                <a href="" className="text-lg hover:font-semibold ">
+          <div className="h-100vh absolute left-0 top-20 w-[100%] bg-[#ffffffdd]  shadow-lg transition-all lg:flex">
+            <div className="nav-mb">
+              <NavLink to="/">
+                <p className="text-lg hover:font-semibold">Home</p>
+              </NavLink>
+            </div>
+            <div className="nav-mb">
+              <NavLink to="/shop">
+                <p href="" className="text-lg hover:font-semibold ">
                   Products
-                </a>
-              </Link>
-            </li>
-            <li className="nav-mb">
-              <Link to="/contact">
-                <a href="#contact" className="text-lg hover:font-semibold">
+                </p>
+              </NavLink>
+            </div>
+            <div className="nav-mb">
+              <NavLink to="/contact">
+                <p href="#contact" className="text-lg hover:font-semibold">
                   Contact
-                </a>
-              </Link>
-            </li>
-            <li className="nav-mb">
-              <Link to="/workshops">
-                <a href="" className="text-lg hover:font-semibold">
+                </p>
+              </NavLink>
+            </div>
+            <div className="nav-mb">
+              <NavLink to="/workshops">
+                <p href="" className="text-lg hover:font-semibold">
                   WorkShops
-                </a>
-              </Link>
-            </li>
-            <li className="nav-mb">
-              <Link to="/about">
-                <a className="text-lg hover:font-semibold">About us</a>
-              </Link>
-            </li>
-            <li className="nav-mb">
-              <Link to="/login">
-                <a className="text-lg hover:font-semibold">Sign up / Login</a>
-              </Link>
-            </li>
-          </ul>
+                </p>
+              </NavLink>
+            </div>
+            <div className="nav-mb">
+              <NavLink to="/about">
+                <p className="text-lg hover:font-semibold">About us</p>
+              </NavLink>
+            </div>
+            <div className="nav-mb">
+              <NavLink to="/login">
+                <p className="text-lg hover:font-semibold">Sign up / Login</p>
+              </NavLink>
+            </div>
+          </div>
         </div>
       ) : null}
     </nav>

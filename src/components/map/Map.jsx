@@ -3,6 +3,7 @@ import Navbar from "../page/Navbar";
 import Footer from "../page/Footer";
 import Box from "./Box";
 import Events from "../work/Events";
+import { Link } from "react-router-dom";
 const data = [
   {
     id: 1,
@@ -77,12 +78,16 @@ const Map = () => {
               covered. Pick your plant, pick your planter. We pot it for you.
             </p>
             <div className="mx-4 my-4 flex lg:my-4 ">
-              <button className="h-[60px] w-[160px] bg-[#00AB84] font-domine text-white hover:bg-[#0f7960] md:mx-0 md:w-[110px] lg:w-[180px]">
-                Workshops
-              </button>
-              <button className="mx-6  h-[60px] w-[160px] bg-white  font-domine text-[#00AB84] hover:bg-[#c0ffef] md:mx-8 md:w-[110px] lg:mx-12 lg:w-[180px]">
-                All Events
-              </button>
+              <Link to="/workshops">
+                <button className="h-[60px] w-[160px] bg-[#00AB84] font-domine text-white hover:bg-[#0f7960] md:mx-0 md:w-[110px] lg:w-[180px]">
+                  Workshops
+                </button>
+              </Link>
+              <Link to="/shop">
+                <button className="mx-6  h-[60px] w-[160px] bg-white  font-domine text-[#00AB84] hover:bg-[#c0ffef] md:mx-8 md:w-[110px] lg:mx-12 lg:w-[180px]">
+                  All Events
+                </button>
+              </Link>
             </div>
           </div>
           <div className="mb-20 md:mb-0 md:basis-1/2 lg:basis-2/3">
@@ -94,29 +99,33 @@ const Map = () => {
           <div className="flex flex-col lg:flex-row">
             <div className="mx-4 my-8 lg:basis-1/2">
               <h1 className="m-4 font-domine text-4xl">New York</h1>
-              {data.map((item) => {
-                return (
-                  <div
-                    className="flex items-center border-y-[1px] border-gray-200 py-4"
-                    key={item.id}
-                  >
-                    <img
-                      src={item.image}
-                      alt=""
-                      className="mx-6 my-4 w-1/4 lg:mx-2"
-                    />
-                    <div className="mx-4">
-                      <h3 className="font-domine text-xl text-[#00AB84]">
-                        {item.name}
-                      </h3>
-                      <p className="my-1 font-domine text-base">{item.title}</p>
-                      <p className="my-1 font-domine text-base">
-                        {item.address}
-                      </p>
+              <Link to="/store" className="hover:normal-case">
+                {data.map((item) => {
+                  return (
+                    <div
+                      className="flex items-center border-y-[1px] border-gray-200 py-4"
+                      key={item.id}
+                    >
+                      <img
+                        src={item.image}
+                        alt=""
+                        className="mx-6 my-4 w-1/4 lg:mx-2"
+                      />
+                      <div className="mx-4">
+                        <h3 className="font-domine text-xl text-[#00AB84]">
+                          {item.name}
+                        </h3>
+                        <p className="my-1 font-domine text-base">
+                          {item.title}
+                        </p>
+                        <p className="my-1 font-domine text-base">
+                          {item.address}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </Link>
             </div>
 
             <div className="my-8 lg:mx-4 lg:basis-1/2">
@@ -189,8 +198,10 @@ const Map = () => {
                   className="my-4 h-3/4 w-[420px] md:mx-10"
                 />
                 <div className="md:mx-10">
-                  <h3 className="text-2xl font-domine font-medium my-2">{list.title}</h3>
-                  <p className="font-domine text-gray-500 mr-10">{list.desc}</p>
+                  <h3 className="my-2 font-domine text-2xl font-medium">
+                    {list.title}
+                  </h3>
+                  <p className="mr-10 font-domine text-gray-500">{list.desc}</p>
                 </div>
               </div>
             );

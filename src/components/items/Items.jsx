@@ -65,7 +65,7 @@ const Info = () => {
     <>
       <NewNav />
       <Fragment>
-        <div className="flex flex-col md:max-w-[1024px]  md:flex-row lg:max-w-full lg:pb-10 ">
+        <div className="flex flex-col md:max-w-[1024px]  md:flex-row  lg:max-w-full lg:pb-20 ">
           <div className="h-[30vh] w-1/2 md:basis-1/2 lg:basis-1/3">
             <div className="mx-[2rem] my-4 flex lg:mx-[5.75rem]">
               <Link to="/">

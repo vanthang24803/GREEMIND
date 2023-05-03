@@ -37,19 +37,19 @@ const Home = () => {
           </div>
         </div>
 
-        <form className="mx-8 my-10 md:mx-0 md:my-12 md:px-16">
+        <form className="mx-8 my-10 flex items-center md:mx-0 md:my-12 md:px-16">
           <input
             type="text"
             placeholder="What are you looking for?"
             className="h-[50px]  w-full rounded-lg px-4 text-[14px] md:w-[360px] md:text-base lg:w-[425px]"
           />
-          <button className="primary absolute right-[21%] top-[42.25%] h-[34px] w-[34px] rounded text-[16px] md:left-[54.5%] md:top-[40%] lg:left-[32%] lg:top-[60%] ">
+          <button className="primary ] absolute h-[34px] w-[34px] rounded text-[16px] md:right-[20rem]  lg:left-[30rem]  right-20 flex justify-center items-center">
             <FiSearch className="mx-2 text-[17px] transition-all hover:scale-125" />
           </button>
         </form>
       </div>
 
-      <div className="hidden md:flex ">
+      <div className="hidden md:flex items-center justify-center">
         <img
           src={Dark}
           alt=""
@@ -58,7 +58,7 @@ const Home = () => {
         <img
           src={Main}
           alt=""
-          className="absolute md:right-0 md:top-[17%] md:h-[39.3%] lg:right-[12%] lg:top-[22%] lg:h-[25.8rem]"
+          className="absolute md:-right-5 md:top-24 md:h-[40.65%] lg:right-[12%] lg:top-[10.3rem] lg:h-[25.8rem]"
         />
       </div>
       <div className="hidden lg:block">
