@@ -15,7 +15,7 @@ const footer = {
   main: [
     {
       id: 1,
-      title: "Information",
+      title: "Home",
       ops1: "About",
       ops2: "Product",
       ops3: "Blog",
@@ -78,14 +78,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col text-center md:mx-[10%] md:flex-row md:text-start lg:mx-[50%] justify-center items-center">
+        <div className="flex flex-col text-center md:mx-[20%] md:flex-row md:text-start lg:mx-[50%] justify-center items-center">
           {main.map(({ id, title, ops1, ops2, ops3 }) => {
             return (
               <div className="mx-8" key={id}>
-                <h1 className="my-6 font-bold hover:cursor-context-menu hover:underline">
+                <h1 className="my-4 font-bold hover:cursor-context-menu hover:underline flex justify-center items-center">
                   {title}
                 </h1>
-                <div>
+                <div className="flex flex-col justify-center font-domine">
                   <div className="social">{ops1}</div>
                   <div className="social">{ops2}</div>
                   <div className="social">{ops3}</div>
