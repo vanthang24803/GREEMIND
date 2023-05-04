@@ -47,12 +47,12 @@ const Footer = () => {
           <img
             src={logo}
             alt=""
-            className="mx-[7rem] py-4  md:mx-0 md:py-4 lg:py-6"
+            className="mx-[7.2rem] py-4  md:mx-0 md:py-4 lg:py-6"
           />
-          <h3 className="mt-2 text-center text-[14px] text-gray-500 md:pb-2 md:text-start lg:pb-4">
+          <h3 className="mt-2 flex justify-center items-center text-[14px] text-gray-500 md:pb-2 md:text-start font-domine lg:pb-4">
             {subtitle}
           </h3>
-          <div className="mx-[6.25rem] flex md:mx-0">
+          <div className="flex justify-center items-center">
             <div className="hover:cursor-pointer ">
               <Link
                 to="https://www.facebook.com/songkhac.hoccach.52/"
@@ -78,7 +78,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col text-center md:mx-[10%] md:flex-row md:text-start lg:mx-[50%]">
+        <div className="flex flex-col text-center md:mx-[10%] md:flex-row md:text-start lg:mx-[50%] justify-center items-center">
           {main.map(({ id, title, ops1, ops2, ops3 }) => {
             return (
               <div className="mx-8" key={id}>

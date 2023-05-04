@@ -17,7 +17,7 @@
     @apply bg-[#C1DCDC];
   }
   .icon-ft {
-    @apply mr-6 mt-4 text-[22px] transition-all hover:scale-150;
+    @apply md:mx-3 mx-5 my-4  text-[22px] transition-all hover:scale-150;
   }
   .social {
     @apply my-4 text-center text-[14px] text-gray-400 hover:cursor-pointer hover:font-medium hover:text-gray-600 md:relative md:text-start md:after:absolute md:after:bottom-0 md:after:left-0 md:after:h-[1px] md:after:w-0 md:after:bg-slate-900 md:after:transition-all md:after:duration-300 md:after:ease-in-out md:hover:after:w-[60%];
