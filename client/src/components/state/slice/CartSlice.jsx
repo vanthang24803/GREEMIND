@@ -12,7 +12,7 @@ const CartSlice = createSlice({
     add: (state, action) => {
       state.amount++;
       const cartItem = state.cartItems.find(  
-        (cartItem) => cartItem.id === action.payload.id
+        (cartItem) => cartItem._id === action.payload._id
       );
       cartItem
         ? (cartItem.amount = cartItem.amount + 1)
@@ -21,7 +21,7 @@ const CartSlice = createSlice({
     increase: (state, action) => {
       state.amount++;
       const itemIndex = state.cartItems.findIndex(
-        (cartItem) => cartItem.id === action.payload.id
+        (cartItem) => cartItem._id === action.payload._id
       );
       state.cartItems[itemIndex].amount += 1;
       let total = 0;
@@ -29,7 +29,7 @@ const CartSlice = createSlice({
     },
     decrease: (state, action) => {
       const itemIndex = state.cartItems.findIndex(
-        (cartItem) => cartItem.id === action.payload.id
+        (cartItem) => cartItem._id === action.payload._id
       );
       state.cartItems[itemIndex].amount > 1 &&
         state.cartItems[itemIndex].amount-- &&
@@ -37,9 +37,9 @@ const CartSlice = createSlice({
     },
     remove: (state, action) => {
       state.cartItems.map((cartItem) => {
-        if (cartItem.id === action.payload.id) {
+        if (cartItem._id === action.payload._id) {
           state.cartItems = state.cartItems.filter(
-            (item) => item.id !== cartItem.id
+            (item) => item._id !== cartItem._id
           );
           state.amount = state.amount - cartItem.amount;
         }

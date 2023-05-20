@@ -1,10 +1,11 @@
-import React, { useState, Fragment } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, Fragment, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Login1 from "/src/assets/Login1.svg";
 import Login4 from "/src/assets/Login4.svg";
 import { FcGoogle } from "react-icons/fc";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Popup from "../shop/Popup";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const data = {
   create: {
@@ -43,6 +44,46 @@ const Login = () => {
   } = login;
 
   const [success, setSuccess] = useState(false);
+  // Auth State
+
+  // Router
+  const navigate = useNavigate();
+
+  // Context Api
+
+  const { loginUser } = useContext(AuthContext);
+
+  // Login Api
+  const [loginForm, setLoginForm] = useState({
+    username: "",
+    password: "",
+  });
+
+  const { username, password } = loginForm;
+
+  const onChangeLogin = (event) => {
+    setLoginForm({
+      ...loginForm,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const loginSuccess = async (event) => {
+    event.preventDefault();
+
+    try {
+      const loginData = await loginUser(loginForm);
+      console.log(loginData);
+
+      if (!loginData.success) {
+        setAlert({ type: "danger", message: loginData.message });
+        setTimeout(() => setAlert(null), 5000);
+      }
+      navigate("/dash");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleSuccess = () => {
     setSuccess(!success);
@@ -68,13 +109,31 @@ const Login = () => {
               </div>
 
               <form className="m-10 flex-row">
-                <input type="text" required placeholder="Name" className="input" />
-                <input type="email" required placeholder="Email" className="input" />
-                <input type="text" required placeholder="Password" className="input" />
+                <input
+                  type="text"
+                  required
+                  placeholder="Name"
+                  name="username"
+                  className="input"
+                />
+                <input
+                  type="email"
+                  required
+                  placeholder="Email"
+                  className="input"
+                />
+                <input
+                  type="text"
+                  required
+                  name="password"
+                  placeholder="Password"
+                  className="input"
+                />
               </form>
 
               <div className="">
-                <button type="submit"
+                <button
+                  type="submit"
                   className="mx-10 my-0 h-[55px] w-[32vh] rounded-xl bg-gray-700 text-base font-bold text-white transition-all ease-in hover:scale-105 md:my-2 md:w-[27.5vh] lg:w-[67.5vh]"
                   onClick={hanldeModal}
                 >
@@ -142,27 +201,42 @@ const Login = () => {
                 </p>
               </div>
 
-              <form className="m-10 flex-row">
-                <input type="email" placeholder="Email" className="input" />
-                <input type="text" placeholder="Password" className="input" />
+              <form className="m-10 flex-row" onSubmit={loginSuccess}>
+                <input
+                  type="text"
+                  placeholder="Email"
+                  className="input"
+                  name="username"
+                  value={username}
+                  onChange={onChangeLogin}
+                />
+                <input
+                  type="text"
+                  placeholder="Password"
+                  className="input"
+                  name="password"
+                  value={password}
+                  onChange={onChangeLogin}
+                />
                 <Link to="/forgot">
-                  <p className="cursor-pointer text-end text-[12px] font-normal text-gray-400 hover:font-semibold hover:text-gray-800 ">
+                  <p className="mb-8 cursor-pointer text-end text-[12px] font-normal text-gray-400 hover:font-semibold hover:text-gray-800">
                     {forgot2}
                   </p>
                 </Link>
-              </form>
 
-              <div className="">
-                <button className="mx-10 my-0 h-[55px] w-[32vh] rounded-xl bg-gray-700 text-base font-bold text-white transition-all ease-in hover:scale-105 md:my-2 md:w-[27.5vh] lg:w-[67.5vh]">
+                <button
+                  className=" my-0 h-[55px] w-full rounded-xl bg-gray-700 text-base font-bold text-white transition-all ease-in hover:scale-105 md:my-2 md:w-[27.5vh] lg:w-[67.5vh]"
+                  type="submit"
+                >
                   {btnText2}
                 </button>
                 <button
-                  className="mx-10 my-6 flex h-[55px] w-[32vh] items-center justify-center rounded-xl border-2 border-black bg-white text-base 
+                  className=" my-6 flex h-[55px] w-full items-center justify-center rounded-xl border-2 border-black bg-white text-base 
                 font-semibold text-black transition-all ease-in hover:scale-105 md:my-4  md:w-[27.5vh] lg:w-[67.5vh]"
                 >
                   <FcGoogle className="mx-2 text-xl" /> {google2}
                 </button>
-              </div>
+              </form>
 
               <div className="flex items-center justify-center">
                 <p className="mx-2 my-6 text-base text-gray-500 md:my-4 ">
