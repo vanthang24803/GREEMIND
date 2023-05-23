@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const morgan = require("morgan");
 const userRouter = require("./router/user");
 const itemRouter = require("./router/shop");
+const giftRouter = require("./router/gift");
 const app = express();
 dotenv.config();
 
@@ -16,6 +17,8 @@ app.use(express.json());
 // Router
 app.use("/api/user", userRouter);
 app.use("/api/shop", itemRouter);
+app.use("/api/gift", giftRouter);
+
 // Connect to MongoDatabase
 
 const connect = async () => {
