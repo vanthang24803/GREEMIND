@@ -14,8 +14,14 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  email: {
+    type: String,
+  },
+  order: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "items",
+  },
 });
 
 let User = mongoose.model("users", UserSchema);
-
 module.exports = { User };

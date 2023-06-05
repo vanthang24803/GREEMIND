@@ -51,7 +51,7 @@ function App() {
               <Route path="/store" element={<Store />} />
               <Route path="*" element={<Page404 />} />
               <Route element={<ProtectedRoute />}>
-                <Route path="/dash" element={<Dasboard />} />
+                <Route path="/dash" element={<Dasboard />} exact />
               </Route>
             </Routes>
           </BrowserRouter>

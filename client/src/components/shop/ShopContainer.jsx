@@ -13,7 +13,7 @@ const ShopContainer = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/shop/items`)
+      .get(`http://localhost:8080/api/shop`)
       .then((res) => {
         setData(res.data.items);
         setFilteredData(res.data.items);

@@ -7,10 +7,10 @@ const verifyToken = require("../middleware/auth");
 router.post("/", verifyToken, itemController.addItems);
 
 // Get All Items
-router.get("/items", itemController.getItems);
+router.get("/", itemController.getItems);
 
 // Get Items By User
-router.get("/", verifyToken, itemController.getItemsByUser);
+router.get("/:id", verifyToken, itemController.getItemsByUser);
 
 // Update Items 
 router.put("/:id", verifyToken, itemController.updateItems);

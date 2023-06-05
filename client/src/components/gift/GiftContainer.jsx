@@ -13,7 +13,7 @@ const GiftContainer = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/gift/all`)
+      .get("http://localhost:8080/api/gift/all")
       .then((res) => {
         setData(res.data.gifts);
         setFilteredData(res.data.gifts);
@@ -61,7 +61,7 @@ const GiftContainer = () => {
                   className="absolute mx-5 mt-[38vh] hidden h-[40px] w-[32vh] bg-[#fffefedd] font-domine 
                   text-lg font-bold uppercase text-[#6aaeae] shadow transition-all ease-in-out group-hover:block md:mx-6 
                   md:my-[22vh] md:w-[16vh] md:hover:-translate-y-2 lg:mx-[0.75rem] lg:my-[40vh] lg:w-[40vh]"
-                  onClick={() => dispatch(add(item))}
+                  onClick={() => dispatch(add(gift))}
                 >
                   Buy Now
                 </button>

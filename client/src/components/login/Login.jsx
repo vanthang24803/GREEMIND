@@ -211,12 +211,13 @@ const Login = () => {
                   onChange={onChangeLogin}
                 />
                 <input
-                  type="text"
+                  type="password"
                   placeholder="Password"
                   className="input"
                   name="password"
                   value={password}
                   onChange={onChangeLogin}
+                  
                 />
                 <Link to="/forgot">
                   <p className="mb-8 cursor-pointer text-end text-[12px] font-normal text-gray-400 hover:font-semibold hover:text-gray-800">
